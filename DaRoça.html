@@ -48,7 +48,7 @@
             flex-shrink: 0;
         }
 
-        h1{
+        nav h1{
             width: 114px;
             height: 26px;
             flex-shrink: 0;
@@ -105,11 +105,15 @@
             margin-left: 21px;
         }
 
+        #Menu_info h1, h2 {
+            color:#FFFFFF;
+        }
+        
 
     </style>
 
     <script>  // java
-
+        
     </script>
 </head>
 
@@ -123,10 +127,20 @@
             <li id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
             <li id="carrinho_botao"><img src="Imagens/Icone_Carrinho.png"><p>Carrinho</p></li>
             <li id="login_botao"><p>Login</p></li>
-            <li id="cadastrar_botao"><p>Cadastre-se</p></li>
+            <li onclick="abrir_cadastro()" id="cadastrar_botao"><p>Cadastre-se</p></li>
         </ul>
 
     </nav>
+
+    <div id="Menu_info">
+
+        <h1>DaRoça</h1>
+
+        <h2>O melhor mercado para fazer suas compras!</h2>
+
+        <img src="Imagens/Imagem_Bem Vindo.jpg">
+    </div>
+
 </body>
 </html>
 
