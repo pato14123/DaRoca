@@ -78,6 +78,15 @@
             width: 120px;
         }
 
+        #mercado_botao:hover{
+            cursor: pointer;
+            background-color: #317200;
+        }
+
+        #mercado_botao:active{
+            background-color: #1e4400;
+        }
+
         #carrinho_botao{
             margin-left: 30px;
             background-color:#3CA1FE;
@@ -93,7 +102,6 @@
 
         #login_botao p{
             margin-left: 40px;
-            
         }
 
         #cadastrar_botao{
@@ -200,7 +208,11 @@
     <script>  // java
         function abrir_cadastro(){
             location.href = 'Cadastro.html'
-        }        
+        }
+        
+        function abrir_mercado(){
+            location.href = 'Mercado.html'
+        }
     </script>
 </head>
 
@@ -211,7 +223,7 @@
 
         <ul>
             <li id="saibamais_botao"><p>Saiba Mais</p></li>
-            <li id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
+            <li onclick="abrir_mercado()" id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
             <li id="carrinho_botao"><img src="Imagens/Icone_Carrinho.png"><p>Carrinho</p></li>
             <li id="login_botao"><p>Login</p></li>
             <li onclick="abrir_cadastro()" id="cadastrar_botao"><p>Cadastre-se</p></li>
