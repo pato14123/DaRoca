@@ -38,12 +38,104 @@
             font-weight: 400;
             line-height: normal;
         }
+
+        div{
+            background-color: white;
+            width: 550px;
+            margin: auto;
+            padding: 10px;
+            
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        form{
+            background-color: white;
+            margin: auto;
+        }
+
+        label{
+            font-family: Inter;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        #Frequencia{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #Finalizar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #3CDA2E;
+        }
+
+        #Finalizar:active{
+            background-color: #24831c;
+        }
+
+        #Apagar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #F23D3D;
+        }
+
+        #Apagar:active{
+            background-color: #8b2121;
+        }
+
+        #Voltar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #ECECEC;;
+        }
+
+        #Voltar:active{
+            background-color: #686868;
+        }
     </style>
 
-    <!--JavaScript-->
-    
     <script>
+        function Verificar(){
+            var Telefone = VerificarTelefone();
+            var CEP = VerificarCEP();
+            if (CEP == false || Telefone == false){
+                alert("Alguma informação está com valores inválidos, Tente Novamente");
+                event.preventDefault()
+            }
+        }
 
+        function VerificarTelefone(){
+            var digitosnecessariosTelefone = 11
+            var digitado = document.getElementById("Telefone").value
+            var quantidadeDigitada = digitado.toString().length
+            if (quantidadeDigitada != digitosnecessariosTelefone){
+                return false
+            }
+            else{
+                return true
+            }
+        }
+
+        function VerificarCEP(){
+            var digitosnecessariosCEP = 8
+            var digitado = document.getElementById("CEP").value
+            var quantidadeDigitada = digitado.toString().length
+            if (quantidadeDigitada != digitosnecessariosCEP){
+                return false
+            }
+            else{
+                return true
+            }
+        }
     </script>
 </head>
 <body>
@@ -53,10 +145,63 @@
         <h1>DaRoça</h1>
     </header>
 
-    <form>
-        <label>Nome:</label>
-        <input type="text">
-    </form>
+    <div>
+        <h2>Cadastre-se</h2>
+        <form onsubmit="Verificar()">
+            <p>
+                <label>Nome:</label>
+                <input type="text">
+            </p>
+
+            <p>
+                <label>Senha:</label>
+                <input type="password">
+            </p>
+
+            <p>
+                <label>Email:</label>
+                <input type="email">
+            </p>
+
+            <p>
+                <label>Telefone:</label>
+                <input type="number" id="Telefone">
+            </p>
+
+            <p>
+                <label>CEP:</label>
+                <input type="number" id="CEP">
+            </p>
+
+            <p>
+                <label>Melhor dia para a entrega:</label>
+                <input type="number">
+            </p>
+
+            <p>
+                <label>Frequência:</label>
+                <p id="Frequencia">
+                    <p>
+                        <input type="radio" name="Frequencia">
+                        <label>Semanal</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="Frequencia">
+                        <label>Quinzenal</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="Frequencia">
+                        <label>Mensal</label>
+                    </p>
+                </p>
+            </p>
+            <p>
+                <input type="submit" value="Finalizar" id="Finalizar">
+                <input type="reset" value="Apagar" id="Apagar">
+                <a href="DaRoca.html"><input type="button" value="Voltar" id="Voltar"></a>
+            </p>
+        </form>
+    </div>
     
 </body>
 </html>
