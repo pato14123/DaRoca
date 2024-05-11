@@ -206,12 +206,24 @@
     </style>
 
     <script>  // java
-        function abrir_cadastro(){
+        function abrir_cadastro() {
             location.href = 'Cadastro.html'
         }
         
-        function abrir_mercado(){
+        function abrir_mercado() {
             location.href = 'Mercado.html'
+        }
+
+        function abrir_login() {
+            location.href = 'Login.html'
+        }
+
+        function abrir_carrinho() {
+            location.href = 'Carrinho.html'
+        }
+
+        function abrir_saibaMais() {
+            location.href = 'Saibamais.html'
         }
     </script>
 </head>
@@ -222,10 +234,10 @@
         <h1>DaRoça</h1>
 
         <ul>
-            <li id="saibamais_botao"><p>Saiba Mais</p></li>
+            <li onclick="abrir_saibaMais" id="saibamais_botao"><p>Saiba Mais</p></li>
             <li onclick="abrir_mercado()" id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
-            <li id="carrinho_botao"><img src="Imagens/Icone_Carrinho.png"><p>Carrinho</p></li>
-            <li id="login_botao"><p>Login</p></li>
+            <li onclick="abrir_carrinho()" id="carrinho_botao"><img src="Imagens/Icone_Carrinho.png"><p>Carrinho</p></li>
+            <li onclick="abrir_login()" id="login_botao"><p>Login</p></li>
             <li onclick="abrir_cadastro()" id="cadastrar_botao"><p>Cadastre-se</p></li>
         </ul>
 
