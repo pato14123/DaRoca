@@ -76,6 +76,11 @@
             background-color: #3CDA2E;
         }
 
+        #Finalizar:hover{
+            cursor: pointer;
+            background-color: #30b125;
+        }
+
         #Finalizar:active{
             background-color: #24831c;
         }
@@ -85,6 +90,11 @@
             height: 53px;
             border-radius: 10px;
             background-color: #F23D3D;
+        }
+
+        #Apagar:hover{
+            cursor: pointer;
+            background-color: #ce3232;
         }
 
         #Apagar:active{
@@ -98,6 +108,11 @@
             background-color: #ECECEC;;
         }
 
+        #Voltar:hover{
+            cursor: pointer;
+            background-color: #c5c5c5;
+        }
+
         #Voltar:active{
             background-color: #686868;
         }
@@ -105,11 +120,21 @@
 
     <script>
         function Verificar(){
-            var Telefone = VerificarTelefone();
-            var CEP = VerificarCEP();
-            if (CEP == false || Telefone == false){
-                alert("Alguma informação está com valores inválidos, Tente Novamente");
+
+            var Nome = VerificacaoVazioNome()
+            var Senha = VerificacaoVazioSenha()
+            var Email = VerificacaoVazioEmail()
+            var MelhorDia = VerificacaoVazioMelhorDia()
+            var Telefone = VerificarTelefone()
+            var CEP = VerificarCEP()
+            if (Nome == false || Senha == false || Email == false || MelhorDia == false || Telefone == false || CEP == false){
+                alert("Alguma informação está com valores inválidos, Tente Novamente")
                 event.preventDefault()
+            }
+
+            else{ // Parte temporária. motivo: não consigo redirecionar sem isso, que está errado
+                event.preventDefault()
+                window.location.href= "CadastroFinalizado.html"
             }
         }
 
@@ -136,6 +161,52 @@
                 return true
             }
         }
+
+        function VerificacaoVazioNome(){
+            var Nome = document.getElementById("Nome").value
+            var tamanho = Nome.toString().length
+            if (tamanho <= 0){
+                return false
+            }
+            else{
+                return true
+            }
+        }
+
+        function VerificacaoVazioSenha(){
+            var Senha = document.getElementById("Senha").value
+            var tamanho = Senha.toString().length
+            if (tamanho <= 0){
+                return false
+            }
+            else{
+                return true
+            }
+        }
+
+        function VerificacaoVazioEmail(){
+            var Email = document.getElementById("Email").value
+            var tamanho = Email.toString().length
+            if (tamanho <= 0){
+                return false
+            }
+            else{
+                return true
+            }
+        }
+
+        function VerificacaoVazioMelhorDia(){
+            var MelhorDia = document.getElementById("MelhorDia").value
+            var tamanho = MelhorDia.toString().length
+            if (tamanho == 1 || tamanho == 2){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+
+        
     </script>
 </head>
 <body>
@@ -150,17 +221,17 @@
         <form onsubmit="Verificar()">
             <p>
                 <label>Nome:</label>
-                <input type="text">
+                <input type="text" id="Nome">
             </p>
 
             <p>
                 <label>Senha:</label>
-                <input type="password">
+                <input type="password" id="Senha">
             </p>
 
             <p>
                 <label>Email:</label>
-                <input type="email">
+                <input type="email" id="Email">
             </p>
 
             <p>
@@ -175,7 +246,7 @@
 
             <p>
                 <label>Melhor dia para a entrega:</label>
-                <input type="number">
+                <input type="number" id="MelhorDia">
             </p>
 
             <p>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #0F3C04;
+        }
+
+        header{
+            margin: auto;
+            background-color: #013C31;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            display: flex;
+        }
+
+        #logo{
+            width: 75px;
+            height: 75px;
+        }
+
+        h1{
+            width: 114px;
+            height: 26px;
+            flex-shrink: 0;
+            color: #FFA800;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        div{
+            background-color: white;
+            margin: auto;
+            margin-top: 250px;
+            padding: 10px;
+            width: 350px;
+            text-align: center;
+            align-items: center;
+        }
+
+        button{
+            width: 126px;
+            height: 43px;
+            border-radius: 10px;
+            background-color: #ECECEC;;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: #c5c5c5;
+        }
+
+        button:active{
+            background-color: #686868;
+        }
+    </style>
+
+    <script>
+        function voltar(){
+            location.href = 'DaRoca.html'
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <img src="Imagens/Logo_DaRoca.jpg" id="logo">
+        <h1>DaRoça</h1>
+    </header>
+
+    <div>
+        <h2>Cadastro concluído</h2>
+        <p>Clique no botão para voltar à página inicial</p>
+        <button onclick="voltar()">Voltar</button>
+    </div>
+</body>
+</html>
