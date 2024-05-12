@@ -68,7 +68,7 @@
             justify-content: space-around;
         }
 
-        .Opcoes{
+        #Frutas{
             border: 1px solid black;
             border-radius: 8px;
             padding: 10px;
@@ -76,12 +76,80 @@
             text-align: center;
         }
 
-        .Opcoes:hover{
+        #Frutas:hover{
             cursor: pointer;
             background-color: #329e17;
         }
 
-        .Opcoes:active{
+        #Frutas:active{
+            background-color: #1c580d;
+        }
+
+        #Vegetais{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #Vegetais:hover{
+            cursor: pointer;
+            background-color: #329e17;
+        }
+
+        #Vegetais:active{
+            background-color: #1c580d;
+        }
+
+        #Frios{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #Frios:hover{
+            cursor: pointer;
+            background-color: #329e17;
+        }
+
+        #Frios:active{
+            background-color: #1c580d;
+        }
+
+        #Bebidas{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #Bebidas:hover{
+            cursor: pointer;
+            background-color: #329e17;
+        }
+
+        #Bebidas:active{
+            background-color: #1c580d;
+        }
+
+        #Alimentos{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #Alimentos:hover{
+            cursor: pointer;
+            background-color: #329e17;
+        }
+
+        #Alimentos:active{
             background-color: #1c580d;
         }
 
@@ -123,23 +191,23 @@
     <div id="Selecionar">
         <h3>Selecione o tipo de Mercadoria que deseja procurar</h3>
         <div id="Selecionar_Tipo">
-            <div onclick="Frutas()" class="Opcoes">
+            <div id="Frutas" onclick="Frutas()">
                 <p>Frutas</p>
             </div>
             
-            <div onclick="Vegetais()" class="Opcoes">
+            <div id="Vegetais" onclick="Vegetais()">
                 <p>Vegetais</p>
             </div>
 
-            <div onclick="Frios()" class="Opcoes">
+            <div id="Frios" onclick="Frios()">
                 <p>Frios</p>
             </div>
 
-            <div onclick="Bebidas()" class="Opcoes">
+            <div id="Bebidas" onclick="Bebidas()">
                 <p>Bebidas</p>
             </div>
 
-            <div onclick="Alimentos()" class="Opcoes">
+            <div id="Alimentos" onclick="Alimentos()">
                 <p>Alimentos</p>
             </div>
         </div>

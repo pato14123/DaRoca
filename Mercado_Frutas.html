@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado DaRoça</title>
+    <style>
+
+        body{
+            margin: 0;
+            background-color: #0F3C04;
+        }
+
+        header{
+            margin: auto;
+            background-color: #013C31;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            display: flex;
+        }
+
+        #logo{
+            width: 75px;
+            height: 75px;
+        }
+
+        h1{
+            width: 114px;
+            height: 26px;
+            flex-shrink: 0;
+            color: #FFA800;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        h2{
+            color: white;
+            font-family: Inter;
+            font-size: 70px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+        }
+
+        #Bem-Vindo{
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.70) 56.5%), url(Imagens/Imagem_mercado.jpg) lightgray 50% / cover no-repeat;
+            height: 400px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        #Selecionar{
+            text-align: center;
+            margin-top: 80px;
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+        }
+
+        #Selecionar_Tipo{
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .Opcoes{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .Opcoes:hover{
+            cursor: pointer;
+            background-color: #329e17;
+        }
+
+        .Opcoes:active{
+            background-color: #1c580d;
+        }
+
+        #Frutas{
+            background-color: #329e17;
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #Selecionar_Produtos{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .Produto{
+            width: 300px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .Produto img{
+            width: 250px;
+            height: 232px;
+        }
+
+        #Adicionar_Retirar{
+            display: flex;
+            justify-content: space-evenly;
+            align-self: flex-end;
+        }
+
+        .Adicionar{
+            width: 40px;
+            height: 40px;
+        }
+
+        .Retirar{
+            width: 40px;
+            height: 40px;
+        }
+
+    </style>
+
+    <script>
+        function Frutas(){
+            location.href = "Mercado_Frutas.html"
+        }
+
+        function Vegetais(){
+            location.href = "Mercado_Vegetais.html"
+        }
+
+        function Frios(){
+            location.href = "Mercado_Frios.html"
+        }
+
+        function Bebidas(){
+            location.href = "Mercado_Bebidas.html"
+        }
+
+        function Alimentos(){
+            location.href = "Mercado_Alimentos.html"
+        }
+
+        function Adcionar_Macas(){
+            var Quantidade = document.querySelector("#Quantidade_Macas").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_Macas").innerHTML = Quantidade
+        }
+
+        function Retirar_Macas(){
+            var Quantidade = document.querySelector("#Quantidade_Macas").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_Macas").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_Laranjas(){
+            var Quantidade = document.querySelector("#Quantidade_Laranjas").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_Laranjas").innerHTML = Quantidade
+        }
+
+        function Retirar_Laranjas(){
+            var Quantidade = document.querySelector("#Quantidade_Laranjas").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_Laranjas").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_Peras(){
+            var Quantidade = document.querySelector("#Quantidade_Peras").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_Peras").innerHTML = Quantidade
+        }
+
+        function Retirar_Peras(){
+            var Quantidade = document.querySelector("#Quantidade_Peras").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_Peras").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_Mamoes(){
+            var Quantidade = document.querySelector("#Quantidade_Mamoes").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_Mamoes").innerHTML = Quantidade
+        }
+
+        function Retirar_Mamoes(){
+            var Quantidade = document.querySelector("#Quantidade_Mamoes").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_Mamoes").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_Maracujas(){
+            var Quantidade = document.querySelector("#Quantidade_Maracujas").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_Maracujas").innerHTML = Quantidade
+        }
+
+        function Retirar_Maracujas(){
+            var Quantidade = document.querySelector("#Quantidade_Maracujas").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_Maracujas").innerHTML = Quantidade
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <header>
+        <img src="Imagens/Logo_DaRoca.jpg" id="logo">
+        <h1>DaRoça</h1>
+    </header>
+
+    <div id="Bem-Vindo">
+        <h2>Bem-Vindo ao mercado DaRoça</h2>
+    </div>
+
+    <div id="Selecionar">
+        <h3>Selecione o tipo de Mercadoria que deseja procurar</h3>
+        <div id="Selecionar_Tipo">
+            <div onclick="Frutas()" id="Frutas">
+                <p>Frutas</p>
+            </div>
+            
+            <div onclick="Vegetais()" class="Opcoes">
+                <p>Vegetais</p>
+            </div>
+
+            <div onclick="Frios()" class="Opcoes">
+                <p>Frios</p>
+            </div>
+
+            <div onclick="Bebidas()" class="Opcoes">
+                <p>Bebidas</p>
+            </div>
+
+            <div onclick="Alimentos()" class="Opcoes">
+                <p>Alimentos</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Selecionar_Produtos">
+        <div class="Produto">
+            <p>Maças</p>
+            <img src="Imagens/Frutas/Maçãs.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_Macas()">-</button>
+                <p id="Quantidade_Macas">0</p>
+                <button class="Adicionar" onclick="Adcionar_Macas()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Laranjas</p>
+            <img src="Imagens/Frutas/Laranjas.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_Laranjas()">-</button>
+                <p id="Quantidade_Laranjas">0</p>
+                <button class="Adicionar" onclick="Adcionar_Laranjas()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Peras</p>
+            <img src="Imagens/Frutas/Peras.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_Peras()">-</button>
+                <p id="Quantidade_Peras">0</p>
+                <button class="Adicionar" onclick="Adcionar_Peras()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Mamões</p>
+            <img src="Imagens/Frutas/Mamões.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_Mamoes()">-</button>
+                <p id="Quantidade_Mamoes">0</p>
+                <button class="Adicionar" onclick="Adcionar_Mamoes()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Maracujás</p>
+            <img src="Imagens/Frutas/Maracujas.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_Maracujas()">-</button>
+                <p id="Quantidade_Maracujas">0</p>
+                <button class="Adicionar" onclick="Adcionar_Maracujas()">+</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
