@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DaRoça</title>
+
+    <!-- css -->
+
+    <style>
+        body{
+            background-color: #0F3C04;
+            margin: 0;
+        }
+
+        ul{
+            display: flex;
+        }
+
+        nav ul li{
+            height: 40px;
+            border-radius: 10px;
+            margin-top: 5px;
+            display: flex;
+        }
+
+        nav ul li img{
+            width: 25px;
+            height: 25px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+
+        nav ul li p{
+            margin-top: 10px;
+            margin-left: 3px;
+        }
+
+        nav{
+            background-color: #013C31;
+            height: 90px;
+            display: flex;
+        }
+
+        #logo_nav{
+            width: 75px;
+            height: 75px;
+            flex-shrink: 0;
+        }
+
+        nav h1{
+            width: 114px;
+            height: 26px;
+            flex-shrink: 0;
+            color: #FFA800;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        #saibamais_botao{
+            background-color: white;
+            width: 110px;
+            padding-left: 5px;
+            margin-left: 150px;
+        }
+
+        #saibamais_botao:hover{
+            cursor: pointer;
+            background-color: #e2e2e2                                                                           ;
+        }
+
+        #saibamais_botao p{
+            margin-left: 16px
+        }
+
+        #mercado_botao{
+            margin-left: 30px;
+            background-color: #429700;
+            width: 120px;
+        }
+
+        #mercado_botao:hover{
+            cursor: pointer;
+            background-color: #317200;
+        }
+
+        #mercado_botao:active{
+            background-color: #1e4400;
+        }
+
+        #carrinho_botao{
+            margin-left: 30px;
+            background-color:#3CA1FE;
+            width: 120px;
+        }
+
+        #carrinho_botao:hover{
+            cursor: pointer;
+            background-color: rgb(101, 138, 238);
+        }
+
+        #perfil{
+            width: 53px;
+            height: 53px;
+            border: 1px solid black ;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D9D9D9;
+        }
+
+        #Menu_info{
+            border-bottom: 1px solid #000;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 43%, rgba(0, 0, 0, 0.90) 84.5%), url("Imagens/Imagem_Bem\ Vindo.jpg") lightgray 50% / cover no-repeat;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            padding: 40px 20px;
+            justify-content: space-around;
+        }
+
+        #Menu_info h1, h2 {
+            color:#FFFFFF;
+            font-size: 50px;
+        }
+
+        #Como_Funcionamos{
+            margin: 20px;
+        }
+
+        #Como_Funcionamos img{
+            width: 273px;
+            height: 236px;
+        }
+
+        #Primeira_Explicação{
+            display: flex;
+            justify-content: center;
+        }
+
+        #Explicação_1{
+            width: 500px;
+            background-color: #941a1a;;
+            padding: 15px;
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-radius: 30px;
+        }
+
+        #Segunda_Explicação{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        #Explicação_2{
+            width: 500px;
+            background-color: #F0F431;;
+            padding: 15px;
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-radius: 30px;
+        }
+
+        #Terceira_Explicação{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        #Explicação_3{
+            width: 500px;
+            background-color: #2CD333;;
+            padding: 15px;
+            color: #000;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-radius: 30px;
+        }
+        
+
+    </style>
+
+    <script>  // java
+        function abrir_mercado() {
+            location.href = 'Mercado.html'
+        }
+
+        function abrir_carrinho() {
+            location.href = 'Carrinho.html'
+        }
+
+        function abrir_saibaMais() {
+            location.href = 'Saibamais.html'
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <img src="Imagens/Logo_DaRoca.jpg" id="logo_nav">
+        <h1>DaRoça</h1>
+
+        <ul>
+            <li onclick="abrir_saibaMais()" id="saibamais_botao"><p>Saiba Mais</p></li>
+            <li onclick="abrir_mercado()" id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
+            <li onclick="abrir_carrinho()" id="carrinho_botao"><img src="Imagens/Icone_Carrinho.png"><p>Carrinho</p></li>
+            <li><div id="perfil"><img src="Imagens/Icone_Conectado.png"></div></li>
+        </ul>
+
+    </nav>
+
+    <div id="Menu_info">
+        <div>
+            <h1>DaRoça</h1>
+            <h2>O melhor mercado para fazer suas compras!</h2>
+        </div>
+    </div>
+
+    <div id="Como_Funcionamos">
+        <h2>Como Funcionamos:</h2>
+        <div id="Primeira_Explicação">
+            <div id="Explicação_1">
+                <p>Clique no botão “cadastre-se” e preencha os dados pedidos, selecione a frequência - semanal, quinzenal ou mensal - o melhor dia de entrega e os produtos que deseja receber, você poderá alterar essas informações depois, se desejar</p>
+            </div>
+            <img src="Imagens/Imagem_pedido.png">
+        </div>
+        <div id="Segunda_Explicação">
+            <div id="Explicação_2">
+                <p>Quando o seu pedido chega, os produtos são
+                    separados e encaixotados durante a madrugada para serem entregues no dia seguinte. As caixas para entrega
+                    são térmicas e foram desenvolvidas pela Klabin para a
+                    DaRoça. Já o transporte é feito em veículos pequenos e
+                    climatizados, que ficam no máximo seis horas com os
+                    produtos.</p>
+            </div>
+            <img src="Imagens/Imagem_Empacotar.png">
+        </div>
+        <div id="Terceira_Explicação">
+            <div id="Explicação_3">
+                <p>As cestas
+                    chegam sempre das 8h às 19h de terça a sexta-feira. No
+                    dia da entrega, enviamos uma mensagem para o cliente
+                    confirmando o horário de chegada da cesta em sua casa.</p>
+            </div>
+            <img src="Imagens/Imagem_entrega.png">
+        </div>
+    </div>
+
+</body>
+</html>
