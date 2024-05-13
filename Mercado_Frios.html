@@ -153,6 +153,68 @@
             background-color: #1c580d;
         }
 
+        .Adicionar{
+            width: 40px;
+            height: 40px;
+        }
+
+        .Retirar{
+            width: 40px;
+            height: 40px;
+        }
+
+        #Adicionar_Retirar{
+            display: flex;
+            justify-content: space-evenly;
+            align-self: flex-end;
+        }
+
+        .Produto img{
+            width: 250px;
+            height: 232px;
+        }
+
+        .Produto{
+            width: 300px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #Frios{
+            background-color: #329e17;
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #Selecionar_Produtos{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .Opcoes{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .Opcoes:hover{
+            cursor: pointer;
+            background-color: #329e17;
+        }
+
+        .Opcoes:active{
+            background-color: #1c580d;
+        }
+
+
     </style>
 
     <script>
@@ -174,6 +236,86 @@
 
         function Alimentos(){
             location.href = "Mercado_Alimentos.html"
+        }
+
+        function Adicionar_salsicha(){
+            var Quantidade = document.querySelector("#Quantidade_salsicha").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_salsicha").innerHTML = Quantidade
+        }
+
+        function Retirar_salsicha(){
+            var Quantidade = document.querySelector("#Quantidade_salsicha").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_salsicha").innerHTML = Quantidade
+            }
+        }
+
+        function Adicionar_salame(){
+            var Quantidade = document.querySelector("#Quantidade_salame").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_salame").innerHTML = Quantidade
+        }
+
+        function Retirar_salame(){
+            var Quantidade = document.querySelector("#Quantidade_salame").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_salame").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_cebola(){
+            var Quantidade = document.querySelector("#Quantidade_cebola").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_cebola").innerHTML = Quantidade
+        }
+
+        function Retirar_cebola(){
+            var Quantidade = document.querySelector("#Quantidade_cebola").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_cebola").innerHTML = Quantidade
+            }
+        }
+
+        function Adicionar_queijo(){
+            var Quantidade = document.querySelector("#Quantidade_queijo").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_queijo").innerHTML = Quantidade
+        }
+
+        function Retirar_queijo(){
+            var Quantidade = document.querySelector("#Quantidade_queijo").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_queijo").innerHTML = Quantidade
+            }
+        }
+
+        function Adicionar_Mortadela(){
+            var Quantidade = document.querySelector("#Quantidade_mortadela").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_mortadela").innerHTML = Quantidade
+        }
+
+        function Retirar_Mortadela(){
+            var Quantidade = document.querySelector("#Quantidade_mortadela").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_mortadela").innerHTML = Quantidade
+            }
         }
     </script>
 </head>
@@ -209,6 +351,54 @@
 
             <div id="Alimentos" onclick="Alimentos()">
                 <p>Alimentos</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Selecionar_Produtos">
+        <div class="Produto">
+            <p>Salsicha (quantidade em kilogramas)</p>
+            <img src="Imagens/Frios/salsicha.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_salsicha()">-</button>
+                <p id="Quantidade_salsicha">0</p>
+                <button class="Adicionar" onclick="Adicionar_salsicha()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Salame (quantidade em kilogramas)</p>
+            <img src="Imagens/Frios/salame.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_salame()">-</button>
+                <p id="Quantidade_salame">0</p>
+                <button class="Adicionar" onclick="Adicionar_salame()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Presunto (quantidade em kilogramas)</p>
+            <img src="Imagens/Frios/presunto.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_cebola()">-</button>
+                <p id="Quantidade_cebola">0</p>
+                <button class="Adicionar" onclick="Adcionar_cebola()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Queijo (quantidade em kilogramas)</p>
+            <img src="Imagens/Frios/queijo.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_queijo()">-</button>
+                <p id="Quantidade_queijo">0</p>
+                <button class="Adicionar" onclick="Adicionar_queijo()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Mortadela (quantidade em kilogramas)</p>
+            <img src="Imagens/Frios/mortadela.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_Mortadela()">-</button>
+                <p id="Quantidade_mortadela">0</p>
+                <button class="Adicionar" onclick="Adicionar_Mortadela()">+</button>
             </div>
         </div>
     </div>

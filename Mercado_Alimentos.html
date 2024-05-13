@@ -153,6 +153,67 @@
             background-color: #1c580d;
         }
 
+        .Adicionar{
+            width: 40px;
+            height: 40px;
+        }
+
+        .Retirar{
+            width: 40px;
+            height: 40px;
+        }
+
+        #Adicionar_Retirar{
+            display: flex;
+            justify-content: space-evenly;
+            align-self: flex-end;
+        }
+
+        .Produto img{
+            width: 250px;
+            height: 232px;
+        }
+
+        .Produto{
+            width: 300px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #Alimentos{
+            background-color: #329e17;
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #Selecionar_Produtos{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .Opcoes{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .Opcoes:hover{
+            cursor: pointer;
+            background-color: #329e17;
+        }
+
+        .Opcoes:active{
+            background-color: #1c580d;
+        }
+
     </style>
 
     <script>
@@ -175,6 +236,87 @@
         function Alimentos(){
             location.href = "Mercado_Alimentos.html"
         }
+
+        function Adicionar_arroz(){
+            var Quantidade = document.querySelector("#Quantidade_arroz").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_arroz").innerHTML = Quantidade
+        }
+
+        function Retirar_arroz(){
+            var Quantidade = document.querySelector("#Quantidade_arroz").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_arroz").innerHTML = Quantidade
+            }
+        }
+
+        function Adicionar_azeitedeoliva(){
+            var Quantidade = document.querySelector("#Quantidade_azeitedeoliva").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_azeitedeoliva").innerHTML = Quantidade
+        }
+
+        function Retirar_azeitedeoliva(){
+            var Quantidade = document.querySelector("#Quantidade_azeitedeoliva").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_azeitedeoliva").innerHTML = Quantidade
+            }
+        }
+
+        function Adicionar_feijao(){
+            var Quantidade = document.querySelector("#Quantidade_feijao").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_feijao").innerHTML = Quantidade
+        }
+
+        function Retirar_feijao(){
+            var Quantidade = document.querySelector("#Quantidade_feijao").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_feijao").innerHTML = Quantidade
+            }
+        }
+
+        function Adicionar_macarrao() {
+            var Quantidade = document.querySelector("#Quantidade_macarrao").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_macarrao").innerHTML = Quantidade
+        }
+
+        function Retirar_macarrao(){
+            var Quantidade = document.querySelector("#Quantidade_macarrao").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_macarrao").innerHTML = Quantidade
+            }
+        }
+
+        function Adicionar_peixe(){
+            var Quantidade = document.querySelector("#Quantidade_peixe").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_peixe").innerHTML = Quantidade
+        }
+
+        function Retirar_peixe(){
+            var Quantidade = document.querySelector("#Quantidade_peixe").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_peixe").innerHTML = Quantidade
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -209,6 +351,54 @@
 
             <div id="Alimentos" onclick="Alimentos()">
                 <p>Alimentos</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Selecionar_Produtos">
+        <div class="Produto">
+            <p>Arroz (unidade)</p>
+            <img src="Imagens/Alimentos/arroz.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_arroz()">-</button>
+                <p id="Quantidade_arroz">0</p>
+                <button class="Adicionar" onclick="Adicionar_arroz()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Azeite De Oliva (unidade)</p>
+            <img src="Imagens/Alimentos/azeitedeioliva.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_azeitedeoliva()">-</button>
+                <p id="Quantidade_azeitedeoliva">0</p>
+                <button class="Adicionar" onclick="Adicionar_azeitedeoliva()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Feijão (unidade)</p>
+            <img src="Imagens/Alimentos/feijão.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_feijao()">-</button>
+                <p id="Quantidade_feijao">0</p>
+                <button class="Adicionar" onclick="Adicionar_feijao()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Macarrão (unidade)</p>
+            <img src="Imagens/Alimentos/macarrão.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_macarrao()">-</button>
+                <p id="Quantidade_macarrao">0</p>
+                <button class="Adicionar" onclick="Adicionar_macarrao()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Peixe (unidade)</p>
+            <img src="Imagens/Alimentos/peixe.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_peixe()">-</button>
+                <p id="Quantidade_peixe">0</p>
+                <button class="Adicionar" onclick="Adicionar_peixe()">+</button>
             </div>
         </div>
     </div>

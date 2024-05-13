@@ -153,6 +153,67 @@
             background-color: #1c580d;
         }
 
+        .Adicionar{
+            width: 40px;
+            height: 40px;
+        }
+
+        .Retirar{
+            width: 40px;
+            height: 40px;
+        }
+
+        #Adicionar_Retirar{
+            display: flex;
+            justify-content: space-evenly;
+            align-self: flex-end;
+        }
+
+        .Produto img{
+            width: 250px;
+            height: 232px;
+        }
+
+        .Produto{
+            width: 300px;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #Vegetais{
+            background-color: #329e17;
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        #Selecionar_Produtos{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .Opcoes{
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100px;
+            text-align: center;
+        }
+
+        .Opcoes:hover{
+            cursor: pointer;
+            background-color: #329e17;
+        }
+
+        .Opcoes:active{
+            background-color: #1c580d;
+        }
+
     </style>
 
     <script>
@@ -174,6 +235,86 @@
 
         function Alimentos(){
             location.href = "Mercado_Alimentos.html"
+        }
+
+        function Adcionar_brocolis(){
+            var Quantidade = document.querySelector("#Quantidade_brocolis").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_brocolis").innerHTML = Quantidade
+        }
+
+        function Retirar_brocolis(){
+            var Quantidade = document.querySelector("#Quantidade_brocolis").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_brocolis").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_alho(){
+            var Quantidade = document.querySelector("#Quantidade_alho").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_alho").innerHTML = Quantidade
+        }
+
+        function Retirar_alho(){
+            var Quantidade = document.querySelector("#Quantidade_alho").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_alho").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_cebola(){
+            var Quantidade = document.querySelector("#Quantidade_cebola").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_cebola").innerHTML = Quantidade
+        }
+
+        function Retirar_cebola(){
+            var Quantidade = document.querySelector("#Quantidade_cebola").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_cebola").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_cenoura(){
+            var Quantidade = document.querySelector("#Quantidade_cenoura").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_cenoura").innerHTML = Quantidade
+        }
+
+        function Retirar_cenoura(){
+            var Quantidade = document.querySelector("#Quantidade_cenoura").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_cenoura").innerHTML = Quantidade
+            }
+        }
+
+        function Adcionar_pimentao(){
+            var Quantidade = document.querySelector("#Quantidade_pimentao").textContent
+            Quantidade = Number(Quantidade)
+            Quantidade = Quantidade + 1
+            document.querySelector("#Quantidade_pimentao").innerHTML = Quantidade
+        }
+
+        function Retirar_pimentao(){
+            var Quantidade = document.querySelector("#Quantidade_pimentao").textContent
+            Quantidade = Number(Quantidade)
+            if (Quantidade != 0){
+                Quantidade = Quantidade - 1
+                document.querySelector("#Quantidade_pimentao").innerHTML = Quantidade
+            }
         }
     </script>
 </head>
@@ -209,6 +350,54 @@
 
             <div id="Alimentos" onclick="Alimentos()">
                 <p>Alimentos</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="Selecionar_Produtos">
+        <div class="Produto">
+            <p>Brócolis (quantidade em kilogramas)</p>
+            <img src="Imagens/Vegetais/brocolis.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_brocolis()">-</button>
+                <p id="Quantidade_brocolis">0</p>
+                <button class="Adicionar" onclick="Adcionar_brocolis()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Alho (quantidade em kilogramas)</p>
+            <img src="Imagens/Vegetais/alho.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_alho()">-</button>
+                <p id="Quantidade_alho">0</p>
+                <button class="Adicionar" onclick="Adcionar_alho()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Cebola (quantidade em kilogramas)</p>
+            <img src="Imagens/Vegetais/cebola.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_cebola()">-</button>
+                <p id="Quantidade_cebola">0</p>
+                <button class="Adicionar" onclick="Adcionar_cebola()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Cenoura (quantidade em kilogramas)</p>
+            <img src="Imagens/Vegetais/cenoura.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_cenoura()">-</button>
+                <p id="Quantidade_cenoura">0</p>
+                <button class="Adicionar" onclick="Adcionar_cenoura()">+</button>
+            </div>
+        </div>
+        <div class="Produto">
+            <p>Pimentão (quantidade em kilogramas)</p>
+            <img src="Imagens/Vegetais/pimentao.png">
+            <div id="Adicionar_Retirar">
+                <button class="Retirar" onclick="Retirar_pimentao()">-</button>
+                <p id="Quantidade_pimentao">0</p>
+                <button class="Adicionar" onclick="Adcionar_pimentao()">+</button>
             </div>
         </div>
     </div>
