@@ -4,8 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login DaRoça</title>
+    <style>
+        body{
+            background-color: #0F3C04;
+            margin: 0px;
+        }
+
+        header{
+            margin: auto;
+            background-color: #013C31;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            display: flex;
+        }
+
+        #logo{
+            width: 75px;
+            height: 75px;
+        }
+
+        h1{
+            width: 114px;
+            height: 26px;
+            flex-shrink: 0;
+            color: #FFA800;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        div{
+            background-color: white;
+            width: 550px;
+            margin: auto;
+            padding: 10px;
+            
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        form{
+            background-color: white;
+            margin: auto;
+        }
+
+        label{
+            font-family: Inter;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        #Conectar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #3CDA2E;
+        }
+
+        #Conectar:hover{
+            cursor: pointer;
+            background-color: #30b125;
+        }
+
+        #Conectar:active{
+            background-color: #24831c;
+        }
+
+        #Apagar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #F23D3D;
+        }
+
+        #Apagar:hover{
+            cursor: pointer;
+            background-color: #ce3232;
+        }
+
+        #Apagar:active{
+            background-color: #8b2121;
+        }
+
+        #Voltar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #ECECEC;;
+        }
+
+        #Voltar:hover{
+            cursor: pointer;
+            background-color: #c5c5c5;
+        }
+
+        #Voltar:active{
+            background-color: #686868;
+        }
+    </style>
+
+    <script>
+        function Verificar(){
+            var Email = VerificarEmail()
+            var Senha = VerificarSenha()
+            if(Email === true && Senha === true){
+                event.preventDefault() //Errado tbm
+                location.href = "DaRoca.html"
+            }
+            else{
+                alert("Email ou Senha incorretos")
+            }
+        }
+
+        function VerificarEmail(){
+            var Email = document.getElementById('Email').value
+            if(Email == "a@gmail.com"){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+
+        function VerificarSenha(){
+            var Senha = document.getElementById('Senha').value
+            if(Senha == "123"){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+    </script>
 </head>
+
 <body>
+<header>
+    <img src="Imagens/Logo_DaRoca.jpg" id="logo">
+    <h1>DaRoça</h1>
+</header>
+
+<div>
+    <h2>Login</h2>
+    <form onsubmit="Verificar()">
+        <p>
+            <label>Email:</label>
+            <input type="email" id="Email">
+        </p>
+
+        <p>
+            <label>Senha:</label>
+            <input type="password" id="Senha">
+        </p>
+        <p>
+            <input type="submit" value="Conectar" id="Conectar">
+            <input type="reset" value="Apagar" id="Apagar">
+            <a href="DaRoca.html"><input type="button" value="Voltar" id="Voltar"></a>
+        </p>
+    </form>
+</div>
     
 </body>
 </html>
