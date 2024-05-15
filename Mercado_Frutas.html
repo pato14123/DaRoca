@@ -178,15 +178,27 @@
             location.href = "Mercado_Alimentos.html"
         }
 
+        function Colocar_Produtos(){
+            let Produtos = ["Maças (por unidade)", "Laranjas (por unidade)", "Peras (por unidade)", "Mamões (por unidade)", "Maracujas (por unidade)"]
+            let Imagem = ["Imagens/Frutas/Maçãs.png", "Imagens/Frutas/Laranjas.png", "Imagens/Frutas/Peras.png",
+                         "Imagens/Frutas/Mamões.png", "Imagens/Frutas/Maracujas.png"]
+            let Preco = ["0,99", "0,99", "0,99", "4,99", "1,99"]
+            for (let i = 0; Produtos.length; i++){
+                let div = document.createElement("div")
+                div.appendChild(document.appendChild(Produtos[i]))
+                //continuar depois
+            }
+        }
+
         function Adcionar_Macas(){
-            var Quantidade = document.querySelector("#Quantidade_Macas").textContent
+            let Quantidade = document.querySelector("#Quantidade_Macas").textContent
             Quantidade = Number(Quantidade)
             Quantidade = Quantidade + 1
             document.querySelector("#Quantidade_Macas").innerHTML = Quantidade
         }
 
         function Retirar_Macas(){
-            var Quantidade = document.querySelector("#Quantidade_Macas").textContent
+            let Quantidade = document.querySelector("#Quantidade_Macas").textContent
             Quantidade = Number(Quantidade)
             if (Quantidade != 0){
                 Quantidade = Quantidade - 1
@@ -195,14 +207,14 @@
         }
 
         function Adcionar_Laranjas(){
-            var Quantidade = document.querySelector("#Quantidade_Laranjas").textContent
+            let Quantidade = document.querySelector("#Quantidade_Laranjas").textContent
             Quantidade = Number(Quantidade)
             Quantidade = Quantidade + 1
             document.querySelector("#Quantidade_Laranjas").innerHTML = Quantidade
         }
 
         function Retirar_Laranjas(){
-            var Quantidade = document.querySelector("#Quantidade_Laranjas").textContent
+            let Quantidade = document.querySelector("#Quantidade_Laranjas").textContent
             Quantidade = Number(Quantidade)
             if (Quantidade != 0){
                 Quantidade = Quantidade - 1
@@ -211,14 +223,14 @@
         }
 
         function Adcionar_Peras(){
-            var Quantidade = document.querySelector("#Quantidade_Peras").textContent
+            let Quantidade = document.querySelector("#Quantidade_Peras").textContent
             Quantidade = Number(Quantidade)
             Quantidade = Quantidade + 1
             document.querySelector("#Quantidade_Peras").innerHTML = Quantidade
         }
 
         function Retirar_Peras(){
-            var Quantidade = document.querySelector("#Quantidade_Peras").textContent
+            let Quantidade = document.querySelector("#Quantidade_Peras").textContent
             Quantidade = Number(Quantidade)
             if (Quantidade != 0){
                 Quantidade = Quantidade - 1
@@ -227,14 +239,14 @@
         }
 
         function Adcionar_Mamoes(){
-            var Quantidade = document.querySelector("#Quantidade_Mamoes").textContent
+            let Quantidade = document.querySelector("#Quantidade_Mamoes").textContent
             Quantidade = Number(Quantidade)
             Quantidade = Quantidade + 1
             document.querySelector("#Quantidade_Mamoes").innerHTML = Quantidade
         }
 
         function Retirar_Mamoes(){
-            var Quantidade = document.querySelector("#Quantidade_Mamoes").textContent
+            let Quantidade = document.querySelector("#Quantidade_Mamoes").textContent
             Quantidade = Number(Quantidade)
             if (Quantidade != 0){
                 Quantidade = Quantidade - 1
@@ -243,14 +255,14 @@
         }
 
         function Adcionar_Maracujas(){
-            var Quantidade = document.querySelector("#Quantidade_Maracujas").textContent
+            let Quantidade = document.querySelector("#Quantidade_Maracujas").textContent
             Quantidade = Number(Quantidade)
             Quantidade = Quantidade + 1
             document.querySelector("#Quantidade_Maracujas").innerHTML = Quantidade
         }
 
         function Retirar_Maracujas(){
-            var Quantidade = document.querySelector("#Quantidade_Maracujas").textContent
+            let Quantidade = document.querySelector("#Quantidade_Maracujas").textContent
             Quantidade = Number(Quantidade)
             if (Quantidade != 0){
                 Quantidade = Quantidade - 1
@@ -273,7 +285,7 @@
         window.location.href = "#Selecionar_Produtos"
     </script>
 </head>
-<body on>
+<body onload="Colocar_Produtos()">
     
     <header>
         <div>
