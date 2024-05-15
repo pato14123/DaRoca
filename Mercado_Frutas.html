@@ -177,19 +177,7 @@
         function Alimentos(){
             location.href = "Mercado_Alimentos.html"
         }
-
-        function Colocar_Produtos(){
-            let Produtos = ["Maças (por unidade)", "Laranjas (por unidade)", "Peras (por unidade)", "Mamões (por unidade)", "Maracujas (por unidade)"]
-            let Imagem = ["Imagens/Frutas/Maçãs.png", "Imagens/Frutas/Laranjas.png", "Imagens/Frutas/Peras.png",
-                         "Imagens/Frutas/Mamões.png", "Imagens/Frutas/Maracujas.png"]
-            let Preco = ["0,99", "0,99", "0,99", "4,99", "1,99"]
-            for (let i = 0; Produtos.length; i++){
-                let div = document.createElement("div")
-                div.appendChild(document.appendChild(Produtos[i]))
-                //continuar depois
-            }
-        }
-
+        
         function Adcionar_Macas(){
             let Quantidade = document.querySelector("#Quantidade_Macas").textContent
             Quantidade = Number(Quantidade)
