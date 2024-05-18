@@ -96,6 +96,7 @@
 
         #Selecionar_Produtos{
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             margin-top: 20px;
         }
@@ -113,7 +114,7 @@
             height: 232px;
         }
 
-        #Adicionar_Retirar{
+        .Adicionar_Retirar{
             display: flex;
             justify-content: space-evenly;
             align-self: flex-end;
@@ -178,19 +179,59 @@
             location.href = "Mercado_Alimentos.html"
         }
 
-        function Colocar_Produtos(){ // Não Funcionando
-            produtos = [{nome: "Maças (unidade)", valor: 0.99, imagem: "Maçãs.png"},
-                        {nome: "Laranjas (unidade)", valor: 0.99, imagem: "Laranjas.png"},
-                        {nome: "Peras(unidade)", valor: 0.99, imagem: "Peras.png"},
-                        {nome: "Mamões(unidade)", valor: 4.99, imagem: "Mamões.png"},
-                        {nome: "Maracujás(unidade)", valor: 1.99, imagem: "Maracujas.png"}]
-            let indice = 0
-            while(indice < length.produtos){
-                document.querySelector("#Selecionar_Produtos").appendChild("<div></div>")
-                indice + 1
+        // Essa função ainda não Funciona
+        function Colocar_Produtos(){
+            let produtos = [{nome: "Maças(unidade)", valor: "0.99", imagem: "Maçãs.png", id: "Macas"},
+                        {nome: "Laranjas(unidade)", valor: "0.99", imagem: "Laranjas.png", id: "Laranjas"},
+                        {nome: "Peras(unidade)", valor: "0.99", imagem: "Peras.png", id: "Peras"},
+                        {nome: "Mamões(unidade)", valor: "4.99", imagem: "Mamões.png", id: "Mamoes"},
+                        {nome: "Maracujás(unidade)", valor: "1.99", imagem: "Maracujas.png", id:"Maracujas"}]
+            for(let indice = 0; indice < produtos.length; indice++){
+
+                //cria as divs
+                let div1 = document.createElement('div')
+                div1.setAttribute("class", "Produto",)
+                div1.setAttribute("id", produtos[indice].id)
+                document.querySelector('#Selecionar_Produtos').appendChild(div1)
+
+                //adcionar informações
+                //nome
+                let nome = document.createElement('p')
+                let node = document.createTextNode(produtos[indice].nome)
+                nome.appendChild(node)
+                document.getElementById(produtos[indice].id).appendChild(nome)
+
+                //preço
+                let preco = document.createElement('p')
+                node = document.createTextNode('R$' + produtos[indice].valor)
+                preco.appendChild(node)
+                document.getElementById(produtos[indice].id).appendChild(preco)
+
+                //imagem
+                let imagem = document.createElement('img')
+                imagem.setAttribute("src", "Imagens/Frutas/" + produtos[indice].imagem)
+                document.getElementById(produtos[indice].id).appendChild(imagem)
+
+                //botões
+                let div2 = document.createElement('div')
+                div2.setAttribute('class', "Adicionar_Retirar" + indice)
+                document.getElementById(produtos[indice].id).appendChild(div2)
+                let botao_adicionar = document.createElement('button')
+                botao_adicionar.setAttribute('class', "Adicionar")
+                let botao_retirar = document.createElement('button')
+                botao_retirar.setAttribute('class', 'Retirar')
+                let quant = document.createElement('p')
+                quant.innerHTML = "0"
+                botao_adicionar.innerHTML = "+"
+                botao_retirar.innerHTML = "-"
+                document.querySelector('.Adicionar_Retirar' + indice).appendChild(botao_retirar)
+                document.querySelector('.Adicionar_Retirar' + indice).appendChild(quant)
+                document.querySelector('.Adicionar_Retirar' + indice).appendChild(botao_adicionar)
+                
+                
             }
         }
-        
+
         function Adcionar_Macas(){
             let Quantidade = document.querySelector("#Quantidade_Macas").textContent
             Quantidade = Number(Quantidade)
@@ -333,7 +374,7 @@
             <p>Maças (unidade de 100g)</p>
             <p>R$0,99</p>
             <img src="Imagens/Frutas/Maçãs.png">
-            <div id="Adicionar_Retirar">
+            <div class="Adicionar_Retirar">
                 <button class="Retirar" onclick="Retirar_Macas()">-</button>
                 <p id="Quantidade_Macas">0</p>
                 <button class="Adicionar" onclick="Adcionar_Macas()">+</button>
@@ -343,7 +384,7 @@
             <p>Laranjas (unidade de 100g)</p>
             <p>R$0,99</p>
             <img src="Imagens/Frutas/Laranjas.png">
-            <div id="Adicionar_Retirar">
+            <div class="Adicionar_Retirar">
                 <button class="Retirar" onclick="Retirar_Laranjas()">-</button>
                 <p id="Quantidade_Laranjas">0</p>
                 <button class="Adicionar" onclick="Adcionar_Laranjas()">+</button>
@@ -353,7 +394,7 @@
             <p>Peras (unidade de 100g)</p>
             <p>R$0,99</p>
             <img src="Imagens/Frutas/Peras.png">
-            <div id="Adicionar_Retirar">
+            <div class="Adicionar_Retirar">
                 <button class="Retirar" onclick="Retirar_Peras()">-</button>
                 <p id="Quantidade_Peras">0</p>
                 <button class="Adicionar" onclick="Adcionar_Peras()">+</button>
@@ -363,7 +404,7 @@
             <p>Mamões (unidade de 300g)</p>
             <p>R$4,99</p>
             <img src="Imagens/Frutas/Mamões.png">
-            <div id="Adicionar_Retirar">
+            <div class="Adicionar_Retirar">
                 <button class="Retirar" onclick="Retirar_Mamoes()">-</button>
                 <p id="Quantidade_Mamoes">0</p>
                 <button class="Adicionar" onclick="Adcionar_Mamoes()">+</button>
@@ -373,7 +414,7 @@
             <p>Maracujás (unidade de 100g)</p>
             <p>R$1,99</p>
             <img src="Imagens/Frutas/Maracujas.png">
-            <div id="Adicionar_Retirar">
+            <div class="Adicionar_Retirar">
                 <button class="Retirar" onclick="Retirar_Maracujas()">-</button>
                 <p id="Quantidade_Maracujas">0</p>
                 <button class="Adicionar" onclick="Adcionar_Maracujas()">+</button>
