@@ -58,22 +58,6 @@
             line-height: normal;
         }
 
-        #saibamais_botao{
-            background-color: white;
-            width: 110px;
-            padding-left: 5px;
-            margin-left: 150px;
-        }
-
-        #saibamais_botao:hover{
-            cursor: pointer;
-            background-color: #e2e2e2                                                                           ;
-        }
-
-        #saibamais_botao p{
-            margin-left: 16px
-        }
-
         #mercado_botao{
             margin-left: 30px;
             background-color: #429700;
@@ -103,7 +87,7 @@
         }
 
         #login_botao{
-            margin-left: 400px;
+            margin-left: 600px;
             background-color:#04D2FF;
             width: 120px;
             border: 0px solid;
@@ -164,9 +148,6 @@
             location.href = 'DaRoca.html'
         }
 
-        function abrir_saibaMais() {
-            location.href = 'Saibamais.html'
-        }
     </script>
 </head>
 
@@ -176,7 +157,6 @@
         <h1>DaRoça</h1>
 
         <ul>
-            <li onclick="abrir_saibaMais()" id="saibamais_botao"><p>Saiba Mais</p></li>
             <li onclick="abrir_mercado()" id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
             <li onclick="Retornar()" id="inicio_botao"><p>Inicio</p></li>
             <li onclick="abrir_login()" id="login_botao"><p>Login</p></li>

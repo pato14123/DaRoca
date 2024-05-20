@@ -61,21 +61,6 @@
             line-height: normal;
         }
 
-        #saibamais_botao{
-            background-color: white;
-            width: 110px;
-            padding-left: 5px;
-            margin-left: 150px;
-        }
-
-        #saibamais_botao:hover{
-            cursor: pointer;
-            background-color: #e2e2e2                                                                           ;
-        }
-
-        #saibamais_botao p{
-            margin-left: 16px
-        }
 
         #mercado_botao{
             margin-left: 30px;
@@ -104,7 +89,7 @@
         }
 
         #login_botao{
-            margin-left: 400px;
+            margin-left: 600px;
             background-color:#04D2FF;
             width: 120px;
             border: 0px solid;
@@ -216,6 +201,51 @@
             line-height: normal;
             border-radius: 30px;
         }
+        #menu_saibamais{
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        #texto_1{
+            width: 700px;
+            text-align: center;
+            color: white;
+            padding-right: 100px;
+            margin-top: 80px;
+        }
+
+        #part1_saibamais{
+            display: flex;
+            padding-bottom: 100px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #imagem_1{
+            width: 644px;
+            height: 322px;
+        }
+
+        #texto_2{
+            width: 700px;
+            text-align: center;
+            color: white;
+            padding-right: 100px;
+            margin-top: 80px;
+        }
+        
+        #imagem_2{
+            width: 546px;
+            height: 380.8px;
+        }
+
+        #part2_saibamais{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
         
 
     </style>
@@ -237,9 +267,6 @@
             location.href = 'Carrinho.html'
         }
 
-        function abrir_saibaMais() {
-            location.href = 'Saibamais.html'
-        }
     </script>
 </head>
 
@@ -249,7 +276,6 @@
         <h1>DaRoça</h1>
 
         <ul>
-            <li onclick="abrir_saibaMais()" id="saibamais_botao"><p>Saiba Mais</p></li>
             <li onclick="abrir_mercado()" id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
             <li onclick="abrir_carrinho()" id="carrinho_botao"><img src="Imagens/Icone_Carrinho.png"><p>Carrinho</p></li>
             <li onclick="abrir_login()" id="login_botao"><p>Login</p></li>
@@ -292,6 +318,37 @@
                     confirmando o horário de chegada da cesta em sua casa.</p>
             </div>
             <img src="Imagens/Imagem_entrega.png">
+        </div>
+    </div>
+
+    <div id="menu_saibamais">
+        <h1>Saiba Mais sobre nós!</h1>
+    </div>
+
+    <div id="part1_saibamais">
+        <div id="texto_1">
+            <h1>Quem Nós somos?</h1>
+
+            <p>Somos uma empresa que tem como objeto facilitar as compras das pessoas, para ajuda-las a não perder tempo indo no mercado</p>
+
+        </div>
+
+        <div>
+            <img  id="imagem_1" src="Imagens/Imagem_Campo.jpg">
+        </div> 
+    </div>
+
+    <div id="part2_saibamais">
+        <div id="texto_2">
+            <h1>Como Surgimos?</h1>
+
+            <p>Em 2019, a jovem Nathália, movida pela paixão pelo campo e pela praticidade da vida moderna, fundou a
+                DaRoça. A proposta da DaRoça é entregar produtos frescos na casa do cliente</p>
+
+        </div>
+
+        <div>
+            <img id="imagem_2" src="Imagens/Imagem_Nathália.jpg">
         </div>
     </div>
 
