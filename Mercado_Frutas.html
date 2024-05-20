@@ -213,9 +213,10 @@
                 document.getElementById(produtos[indice].id).appendChild(imagem)
 
                 //botões
-                let div2 = document.createElement('div')
-                div2.setAttribute('class', "Adicionar_Retirar" + indice)
-                document.getElementById(produtos[indice].id).appendChild(div2)
+                let a = document.querySelector('.Selecionar_Produtos')
+                let div_Botoes = document.createElement('div')
+                div_Botoes.setAttribute('class', "Adicionar_Retirar")
+                document.getElementById(produtos[indice].id).appendChild(div_Botoes)
                 let botao_adicionar = document.createElement('button')
                 botao_adicionar.setAttribute('class', "Adicionar")
                 let botao_retirar = document.createElement('button')
@@ -224,11 +225,11 @@
                 quant.innerHTML = "0"
                 botao_adicionar.innerHTML = "+"
                 botao_retirar.innerHTML = "-"
-                document.querySelector('.Adicionar_Retirar' + indice).appendChild(botao_retirar)
-                document.querySelector('.Adicionar_Retirar' + indice).appendChild(quant)
-                document.querySelector('.Adicionar_Retirar' + indice).appendChild(botao_adicionar)
-                
-                
+                a=document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar')
+                console.log(a)
+                document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(botao_retirar)
+                document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(quant)
+                document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(botao_adicionar)
             }
         }
 
