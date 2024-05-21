@@ -142,6 +142,7 @@
     </style>
 
     <script>
+        //produtos de Frutas
         function Frutas(){
             let produtos = [{nome: "Maças(unidade)", valor: "0,99", imagem: "Maçãs.png", id: "Macas"},
                         {nome: "Laranjas(unidade)", valor: "0,99", imagem: "Laranjas.png", id: "Laranjas"},
@@ -151,7 +152,7 @@
             colocar_produtos(produtos)
         }
 
-
+        //produtos de Vegetais
         function Vegetais(){
             let produtos = [{nome: "Brócolis (quantidade em kilogramas)", valor: "5,99", imagem: "brocolis.png", id: "Brocolis"},
                         {nome: "Alho (quantidade em kilogramas)", valor: "32,99", imagem: "alho.png", id: "Alho"},
@@ -161,6 +162,7 @@
             colocar_produtos(produtos)
         }
 
+        //produtos de Frios
         function Frios(){
             let produtos = [{nome: "Salsicha (quantidade em kilogramas)", valor: "32,99", imagem: "salsicha.png", id: "Salsicha"},
                         {nome: "Salame (quantidade em kilogramas)", valor: "90,99", imagem: "salame.png", id: "Salame"},
@@ -170,6 +172,7 @@
             colocar_produtos(produtos)
         }
 
+        //produtos de Bebidas
         function Bebidas(){
             let produtos = [{nome: "Suco De Laranja (unidade de 500Ml)", valor: "5,99", imagem: "sucodelaranja.png", id: "SucoDeLaranja"},
                         {nome: "Leite (unidade de 1L)", valor: "4,99", imagem: "leite.png", id: "Leite"},
@@ -179,12 +182,13 @@
             colocar_produtos(produtos)
         }
 
+        //produtos de Alimentos
         function Alimentos(){
-            let produtos = [{nome: "Maças(unidade)", valor: "0.99", imagem: "Maçãs.png", id: "Macas"},
-                        {nome: "Laranjas(unidade)", valor: "0.99", imagem: "Laranjas.png", id: "Laranjas"},
-                        {nome: "Peras(unidade)", valor: "0.99", imagem: "Peras.png", id: "Peras"},
-                        {nome: "Mamões(unidade)", valor: "4.99", imagem: "Mamões.png", id: "Mamoes"},
-                        {nome: "Maracujás(unidade)", valor: "1.99", imagem: "Maracujas.png", id:"Maracujas"}]
+            let produtos = [{nome: "Arroz (por quilo)", valor: "5,99", imagem: "arroz.png", id: "Arroz"},
+                        {nome: "Azeite De Oliva (garrafa 500ml)", valor: "39,99", imagem: "azeitedeioliva.png", id: "AzeiteDeOliva"},
+                        {nome: "Feijão (por quilo)", valor: "8,99", imagem: "feijão.png", id: "Feijao"},
+                        {nome: "Macarrão (meio quilo)", valor: "4,99", imagem: "macarrão.png", id: "Macarrao"},
+                        {nome: "Tilápia (por quilo)", valor: "12,00", imagem: "peixe.png", id:"Tilapia"}]
             colocar_produtos(produtos)
         }
 
@@ -222,8 +226,10 @@
                 document.getElementById(produtos[indice].id).appendChild(div_Botoes)
                 let botao_adicionar = document.createElement('button')
                 botao_adicionar.setAttribute('class', "Adicionar")
+                botao_adicionar.setAttribute('onclick', 'adicionar('+produtos[indice].id+')')
                 let botao_retirar = document.createElement('button')
                 botao_retirar.setAttribute('class', 'Retirar')
+                botao_retirar.setAttribute('onclick', 'retirar('+produtos[indice].id+')')
                 let quant = document.createElement('p')
                 quant.innerHTML = "0"
                 botao_adicionar.innerHTML = "+"
@@ -232,6 +238,21 @@
                 document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(quant)
                 document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(botao_adicionar)
                 window.location.href = "#Selecionar_Produtos"
+                let botao_carrinho = document.createElement('button')
+            }
+        }
+
+        function adicionar(produto){
+            let quantidade = produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML
+            let aumentar_quantidade = Number(quantidade) + 1
+            produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML = aumentar_quantidade
+        }
+
+        function retirar(produto){
+            let quantidade = produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML
+            if (Number(quantidade) != 0){
+                let aumentar_quantidade = Number(quantidade) - 1
+                produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML = aumentar_quantidade
             }
         }
 
