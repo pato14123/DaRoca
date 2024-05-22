@@ -281,6 +281,7 @@
             botao_carrinho.innerHTML='Adicionar ao carrinho'
             document.querySelector('#botao_carrinho').appendChild(botao_carrinho)
             }
+
             catch{
             let botao_carrinho = document.createElement('button')
             botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
@@ -291,27 +292,43 @@
         }
 
         function adicionar_ao_carrinho(){
-            let a = document.querySelector("#Selecionar_Produtos")
-            for (let i of document.querySelectorAll(".Adicionar_Retirar")){
-                i.querySelector("p").innerHTML= "0  "
+            for (let quant of document.querySelectorAll(".Adicionar_Retirar")){
+                quant.querySelector("p").innerHTML= "0"
+            }
+        }
+
+        function mudar_BG(nome){
+            for (let i of document.querySelectorAll(".Opcoes")){
+                if (i.querySelector("p").innerHTML == nome){
+                    i.style.backgroundColor = "#329e17"
+                }
+
+                else{
+                    i.style.backgroundColor = ""
+                }
             }
         }
 
         function identificar_selecionado(tipo){
             if (tipo == "frutas"){
                 Frutas()
+                mudar_BG("Frutas")
             }
             else if (tipo == "vegetais"){
                 Vegetais()
+                mudar_BG("Vegetais")
             }
             else if (tipo == "frios"){
                 Frios()
+                mudar_BG("Frios")
             }
             else if (tipo == "bebidas"){
                 Bebidas()
+                mudar_BG("Bebidas")
             }
             else if (tipo == "alimentos"){
                 Alimentos()
+                mudar_BG("Alimentos")
             }
         }
 
