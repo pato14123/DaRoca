@@ -121,12 +121,12 @@
     <script>
         function Verificar(){
 
-            var Nome = VerificacaoVazioNome()
-            var Senha = VerificacaoVazioSenha()
-            var Email = VerificacaoVazioEmail()
-            var MelhorDia = VerificacaoVazioMelhorDia()
-            var Telefone = VerificarTelefone()
-            var CEP = VerificarCEP()
+            let Nome = VerificacaoVazioNome()
+            let Senha = VerificacaoVazioSenha()
+            let Email = VerificacaoVazioEmail()
+            let MelhorDia = VerificacaoVazioMelhorDia()
+            let Telefone = VerificarTelefone()
+            let CEP = VerificarCEP()
             if (Nome == false || Senha == false || Email == false || MelhorDia == false || Telefone == false || CEP == false){
                 alert("Alguma informação está com valores inválidos, Tente Novamente")
                 event.preventDefault()
@@ -139,9 +139,9 @@
         }
 
         function VerificarTelefone(){
-            var digitosnecessariosTelefone = 11
-            var digitado = document.getElementById("Telefone").value
-            var quantidadeDigitada = digitado.toString().length
+            let digitosnecessariosTelefone = 11
+            let digitado = document.getElementById("Telefone").value
+            let quantidadeDigitada = digitado.toString().length
             if (quantidadeDigitada != digitosnecessariosTelefone){
                 return false
             }
@@ -151,9 +151,9 @@
         }
 
         function VerificarCEP(){
-            var digitosnecessariosCEP = 8
-            var digitado = document.getElementById("CEP").value
-            var quantidadeDigitada = digitado.toString().length
+            let digitosnecessariosCEP = 8
+            let digitado = document.getElementById("CEP").value
+            let quantidadeDigitada = digitado.toString().length
             if (quantidadeDigitada != digitosnecessariosCEP){
                 return false
             }
@@ -163,8 +163,8 @@
         }
 
         function VerificacaoVazioNome(){
-            var Nome = document.getElementById("Nome").value
-            var tamanho = Nome.toString().length
+            let Nome = document.getElementById("Nome").value
+            let tamanho = Nome.toString().length
             if (tamanho <= 0){
                 return false
             }
@@ -174,8 +174,8 @@
         }
 
         function VerificacaoVazioSenha(){
-            var Senha = document.getElementById("Senha").value
-            var tamanho = Senha.toString().length
+            let Senha = document.getElementById("Senha").value
+            let tamanho = Senha.toString().length
             if (tamanho <= 0){
                 return false
             }
@@ -185,8 +185,8 @@
         }
 
         function VerificacaoVazioEmail(){
-            var Email = document.getElementById("Email").value
-            var tamanho = Email.toString().length
+            let Email = document.getElementById("Email").value
+            let tamanho = Email.toString().length
             if (tamanho <= 0){
                 return false
             }
@@ -196,9 +196,8 @@
         }
 
         function VerificacaoVazioMelhorDia(){
-            var MelhorDia = document.getElementById("MelhorDia").value
-            var tamanho = MelhorDia.toString().length
-            if (tamanho == 1 || tamanho == 2){
+            let MelhorDia = document.getElementById("MelhorDia").value
+            if (MelhorDia != ""){
                 return true
             }
             else{
@@ -246,7 +245,16 @@
 
             <p>
                 <label>Melhor dia para a entrega:</label>
-                <input type="number" id="MelhorDia">
+                <select id="MelhorDia">
+                    <option></option>
+                    <option>Domingo</option>
+                    <option>Segunda</option>
+                    <option>Terça</option>
+                    <option>Quarta</option>
+                    <option>Quinta</option>
+                    <option>Sexta</option>
+                    <option>Sábado</option>
+                </select>
             </p>
 
             <p>
