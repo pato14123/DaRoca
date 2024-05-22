@@ -139,6 +139,18 @@
             height: 40px;
         }
 
+        #botao_carrinho{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px
+        }
+
+        #adicionar_ao_carrinho{
+            background-color: rgb(105, 255, 105);
+            height: 120px;
+            width: 220px;
+        }
+
     </style>
 
     <script>
@@ -150,6 +162,7 @@
                         {nome: "Mamões(unidade)", valor: "4,99", imagem: "Mamões.png", id: "Mamoes"},
                         {nome: "Maracujás(unidade)", valor: "1,99", imagem: "Maracujas.png", id:"Maracujas"}]
             colocar_produtos(produtos)
+            colocar_botao_carrinho()
         }
 
         //produtos de Vegetais
@@ -160,6 +173,7 @@
                         {nome: "Cenoura (quantidade em kilogramas)", valor: "5,99", imagem: "cenoura.png", id: "Cenoura"},
                         {nome: "Pimentão (quantidade em kilogramas)", valor: "24,99", imagem: "pimentao.png", id:"Pimentao"}]
             colocar_produtos(produtos)
+            colocar_botao_carrinho()
         }
 
         //produtos de Frios
@@ -170,6 +184,7 @@
                         {nome: "Queijo (quantidade em kilogramas)", valor: "95,99", imagem: "queijo.png", id: "Queijo"},
                         {nome: "Mortadela (quantidade em kilogramas)", valor: "92,99", imagem: "mortadela.png", id:"mortadela"}]
             colocar_produtos(produtos)
+            colocar_botao_carrinho()
         }
 
         //produtos de Bebidas
@@ -180,6 +195,7 @@
                         {nome: "Fanta (unidade de 2L)", valor: "7,99", imagem: "fanta.png", id: "Fanta"},
                         {nome: "Coca Cola (unidade de 2L)", valor: "10,99", imagem: "cocacola.png", id:"CocaCola"}]
             colocar_produtos(produtos)
+            colocar_botao_carrinho()
         }
 
         //produtos de Alimentos
@@ -190,6 +206,7 @@
                         {nome: "Macarrão (meio quilo)", valor: "4,99", imagem: "macarrão.png", id: "Macarrao"},
                         {nome: "Tilápia (por quilo)", valor: "12,00", imagem: "peixe.png", id:"Tilapia"}]
             colocar_produtos(produtos)
+            colocar_botao_carrinho()
         }
 
         function colocar_produtos(produtos){
@@ -253,6 +270,29 @@
                 let aumentar_quantidade = Number(quantidade) - 1
                 produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML = aumentar_quantidade
             }
+        }
+
+        //coloca itens no carrinho  /!!! NÃO FUNCIONANDO
+        function colocar_botao_carrinho(){
+            try{
+            document.querySelector('#adicionar_ao_carrinho').remove()
+            let botao_carrinho = document.createElement('button')
+            botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
+            botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho('+document.querySelector("#Selecionar_Produtos")+')')
+            botao_carrinho.innerHTML='Adicionar ao carrinho'
+            document.querySelector('#botao_carrinho').appendChild(botao_carrinho)
+            }
+            catch{
+            let botao_carrinho = document.createElement('button')
+            botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
+            botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho('+document.querySelector(".Adicionar_Retirar").querySelector("p").innerHTML+')')
+            botao_carrinho.innerHTML='Adicionar ao carrinho'
+            document.querySelector('#botao_carrinho').appendChild(botao_carrinho)
+            }
+        }
+
+        function adicionar_ao_carrinho(produtos){
+            console.log(produtos)
         }
 
         function identificar_selecionado(tipo){
@@ -321,6 +361,9 @@
     </div>
 
     <div id="Selecionar_Produtos">
+
+    </div>
+    <div id="botao_carrinho">
 
     </div>
 
