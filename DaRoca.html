@@ -11,8 +11,10 @@
         body{
             background-color: #0F3C04;
             margin: 0;
+            font-family: Arial;
         }
 
+        /* Navegação */
         ul{
             display: flex;
         }
@@ -60,8 +62,9 @@
             font-weight: 400;
             line-height: normal;
         }
+        /* Fim navegação */
 
-
+        /* Botões */
         #mercado_botao{
             margin-left: 30px;
             background-color: #429700;
@@ -122,10 +125,12 @@
         #cadastrar_botao p{
             margin-left: 21px;
         }
+        /* Fim Botões */
 
+        /* Começo da pagina*/
         #Menu_info{
             border-bottom: 1px solid #000;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 43%, rgba(0, 0, 0, 0.90) 84.5%), url("Imagens/Imagem_Bem\ Vindo.jpg") lightgray 50% / cover no-repeat;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 43%, rgba(0, 0, 0, 0.90) 84.5%), url("Imagens/Imagem_Bem_Vindo-Saiba_Mais3.jpg") lightgray 50% / cover no-repeat;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             display: flex;
             padding: 40px 20px;
@@ -136,116 +141,88 @@
             color:#FFFFFF;
             font-size: 50px;
         }
+        /* Fim do começo da pagina */
 
-        #Como_Funcionamos{
+
+
+        /* Tutorial de como pedir */
+        #Como_Pedir{
             margin: 20px;
         }
 
-        #Como_Funcionamos img{
-            width: 273px;
-            height: 236px;
-        }
-
-        #Primeira_Explicação{
+        #explicacoes{
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
         }
 
-        #Explicação_1{
-            width: 500px;
-            background-color: #941a1a;;
-            padding: 15px;
-            color: #000;
-            font-family: Inter;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            border-radius: 30px;
+        .explicacao{
+            width: 250px;
+            font-size: x-large;
         }
 
-        #Segunda_Explicação{
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        #Explicação_2{
-            width: 500px;
-            background-color: #F0F431;;
-            padding: 15px;
-            color: #000;
-            font-family: Inter;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            border-radius: 30px;
-        }
-
-        #Terceira_Explicação{
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        #Explicação_3{
-            width: 500px;
-            background-color: #2CD333;;
-            padding: 15px;
-            color: #000;
-            font-family: Inter;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            border-radius: 30px;
-        }
-        #menu_saibamais{
-            color: white;
+        .n_passo{
+            background-color:#2CD333;
+            width: 100px;
             text-align: center;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            margin: 0px;
+            padding: 10px;
+            border-top-left-radius: 1.5em;
+            border-top-right-radius: 1.5em;
         }
 
-        #texto_1{
-            width: 700px;
-            text-align: center;
-            color: white;
-            padding-right: 100px;
-            margin-top: 80px;
+        .n_passo p{
+            margin: 0px;
         }
 
-        #part1_saibamais{
+        .texto_explicacao{
+            background-color:#2CD333;
+            margin: 0px;
+            padding: 10px;
+            border-radius: 1.5em;
+            border-top-left-radius: 0em;
+            height: 200px;
             display: flex;
-            padding-bottom: 100px;
-            justify-content: space-around;
             align-items: center;
         }
 
-        #imagem_1{
-            width: 644px;
-            height: 322px;
+        .texto_explicacao p{
+            margin: 0px;
         }
 
-        #texto_2{
-            width: 700px;
-            text-align: center;
-            color: white;
-            padding-right: 100px;
-            margin-top: 80px;
+        .texto_explicacao span{
+            font-weight: bold;
         }
-        
-        #imagem_2{
-            width: 546px;
-            height: 380.8px;
+        /* Fim do Tutorial "Como pedir" */
+
+        /* Saiba Mais */
+
+        #Saiba_Mais{
+            margin: 20px;
         }
 
-        #part2_saibamais{
+        #Saiba_Mais_quadros{
             display: flex;
-            align-items: center;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
+
+        .Saiba_Mais_itens{
+            background-color: #013C31;
+            width: 550px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            border-radius: 5em;
+            color: #FFFBE4;
+        }
+
+        .Saiba_Mais_itens img{
+            width: 410px;
+            height: 310px;
+        }
+        /* Fim saiba Mais */
         
 
     </style>
@@ -291,64 +268,83 @@
         </div>
     </div>
 
-    <div id="Como_Funcionamos">
-        <h2>Como Funcionamos:</h2>
-        <div id="Primeira_Explicação">
-            <div id="Explicação_1">
-                <p>Clique no botão “cadastre-se” e preencha os dados pedidos, selecione a frequência - semanal, quinzenal ou mensal - o melhor dia de entrega e os produtos que deseja receber, você poderá alterar essas informações depois, se desejar</p>
+    <div id="Como_Pedir">
+        <h2>Como Fazer um pedido:</h2>
+        <div id="explicacoes">
+            <div class="explicacao">
+                <div class="n_passo">
+                    <p>1º passo</p>
+                </div>
+                <div class="texto_explicacao">
+                    <p>Clique em <span>cadastre-se</span>, coloque suas informações e conclua o cadastro, depois clique em <span>login</span> e entre na sua conta.</p>
+                </div>
             </div>
-            <img src="Imagens/Imagem_pedido.png">
+            <div class="explicacao">
+                <div class="n_passo">
+                    <p>2º passo</p>
+                </div>
+                <div class="texto_explicacao">
+                    <p>Depois de entrar na sua conta, clique em <span>Mercado</span>, selecione os itens que queira comprar e clique em <span>Adicionar ao carrinho</span></p>
+                </div>
+            </div>
+            <div class="explicacao">
+                <div class="n_passo">
+                    <p>3º passo</p>
+                </div>
+                <div class="texto_explicacao">
+                    <p>Depois de colocar todos os produtos desejados, clique em <span>fazer pedido</span>.</p>
+                </div>
+            </div>
         </div>
-        <div id="Segunda_Explicação">
-            <div id="Explicação_2">
-                <p>Quando o seu pedido chega, os produtos são
-                    separados e encaixotados durante a madrugada para serem entregues no dia seguinte. As caixas para entrega
+    </div>
+
+    <div id="Saiba_Mais">
+        <div>
+            <h2>Saiba Mais sobre nós!</h2>
+        </div>
+        <div id="Saiba_Mais_quadros">
+            <div class="Saiba_Mais_itens">
+                <img src="Imagens/Imagem_Saiba_Mais1.jpg">
+                <p>Em 2019, a jovem Nathália, movida pela paixão pelo campo e pela praticidade da vida moderna, fundou a
+                    DaRoça. A proposta da DaRoça é entregar produtos frescos na casa do cliente.</p>
+            </div>
+            <div class="Saiba_Mais_itens">
+                <img src="Imagens/Imagem_Saiba_Mais2.png">
+                <p>A empresa funciona no modelo de recorrência. O cliente
+                    entrada no site, escolhe os produtos que deseja receber,
+                    qual a frequência - semanal, quinzenal ou mensal - e o
+                    melhor dia para receber sua entrega.</p>
+            </div>
+            <div class="Saiba_Mais_itens">
+                <img src="Imagens/Imagem_Bem_Vindo-Saiba_Mais3.jpg">
+                <p>Quando o pedido do cliente chega, os produtos são
+                    separados e encaixotados durante a madrugada para
+                    serem entregues no dia seguinte. As caixas para entrega
                     são térmicas e foram desenvolvidas pela Klabin para a
                     DaRoça. Já o transporte é feito em veículos pequenos e
                     climatizados, que ficam no máximo seis horas com os
                     produtos.</p>
             </div>
-            <img src="Imagens/Imagem_Empacotar.png">
-        </div>
-        <div id="Terceira_Explicação">
-            <div id="Explicação_3">
-                <p>As cestas
+            <div class="Saiba_Mais_itens">
+                <img src="Imagens/Imagem_Saiba_Mais4.png">
+                <p>Os clientes se cadastram em poucos passos, escolhe seus
+                    produtos favoritos que comporão a sua cesta e decide se a
+                    frequência da entrega será semanal, quizenal ou mensal.</p>
+            </div>
+            <div class="Saiba_Mais_itens">
+                <img src="Imagens/Imagem_Saiba_Mais5.png">
+                <p>Separamos as cestas durante a madrugada em um
+                    dos nossos centros de distribuição com o cuidado e
+                    atenção que o nossos clientes merecem.</p>
+            </div>
+            <div class="Saiba_Mais_itens">
+                <img src="Imagens/Imagem_Saiba_Mais6.png">
+                <p>A entrega é feita por veículos climatizados para que as
+                    cestas cheguem em perfeitas condições. As cestas
                     chegam sempre das 8h às 19h de terça a sexta-feira. No
                     dia da entrega, enviamos uma mensagem para o cliente
                     confirmando o horário de chegada da cesta em sua casa.</p>
             </div>
-            <img src="Imagens/Imagem_entrega.png">
-        </div>
-    </div>
-
-    <div id="menu_saibamais">
-        <h1>Saiba Mais sobre nós!</h1>
-    </div>
-
-    <div id="part1_saibamais">
-        <div id="texto_1">
-            <h1>Quem Nós somos?</h1>
-
-            <p>Somos uma empresa que tem como objeto facilitar as compras das pessoas, para ajuda-las a não perder tempo indo no mercado</p>
-
-        </div>
-
-        <div>
-            <img  id="imagem_1" src="Imagens/Imagem_Campo.jpg">
-        </div> 
-    </div>
-
-    <div id="part2_saibamais">
-        <div id="texto_2">
-            <h1>Como Surgimos?</h1>
-
-            <p>Em 2019, a jovem Nathália, movida pela paixão pelo campo e pela praticidade da vida moderna, fundou a
-                DaRoça. A proposta da DaRoça é entregar produtos frescos na casa do cliente</p>
-
-        </div>
-
-        <div>
-            <img id="imagem_2" src="Imagens/Imagem_Nathália.jpg">
         </div>
     </div>
 

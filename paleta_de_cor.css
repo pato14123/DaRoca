@@ -1,0 +1,30 @@
+/* Apenas para identificação */
+
+#cores{
+    color:#0F3C04;
+    color:#2CD333;
+    color:#013C31;
+    color:#ffffff;
+    color:#FFFBE4
+}
+
+#botoes{
+    /* Mercado */
+    color: #429700;
+    color: #317200;
+    color: #1e4400;
+
+    /* Carrinho */
+    color: #3CA1FE;
+    color: rgb(101, 138, 238);
+    color: #04D2FF;
+
+    /* Login */
+    color: #04D2FF;
+    color: #06b3aa;
+
+    /* Cadastro */
+    color: #ffffff;
+    color: #d8d8d8;
+    color: #9b9b9b;
+}
