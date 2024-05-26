@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #0F3C04;
+        }
+
+        header{
+            margin: auto;
+            background-color: #013C31;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            display: flex;
+        }
+
+        #logo{
+            width: 75px;
+            height: 75px;
+        }
+
+        h1{
+            width: 114px;
+            height: 26px;
+            flex-shrink: 0;
+            color: #FFA800;
+            font-family: Inter;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        #retornar_menuprincipal{
+            margin-right: 500px;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+
+        #retornar_menuprincipal:hover{
+            cursor: pointer;
+            background-color: rgb(196, 196, 196);
+        }
+
+        #logo_menu{
+            display: flex;
+            margin-right: 600px;
+        }
+
+        #Perfil{
+            background-color: white;
+            width: 600px;
+            height: 700px;
+            margin: auto;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function colocar_informacoes(selecionado){
+            document.getElementById("Nome").value = "Henrique"
+            document.getElementById("Senha").value = "123"
+            document.getElementById("Email").value = "a@gmail.com"
+            document.getElementById("Telefone").value = "19123456789"
+            document.getElementById("CEP").value = "12345678"
+            document.getElementById("MelhorDia").value = selecionado
+            document.getElementById("Semanal").checked = true
+        }
+    </script>
+</head>
+<body onload="colocar_informacoes('Sabado')">
+    <header>
+        <div>
+            <button id="retornar_menuprincipal" onclick="Retornar()">voltar</button>
+        </div>
+
+        <div id="logo_menu">
+            <img src="Imagens/Logo_DaRoca.jpg" id="logo">
+            <h1>DaRoça</h1>
+        </div>
+    </header>
+
+    <div id="Perfil">
+        <h2>Perfil</h2>
+        <form>
+            <p>
+                <label>Nome:</label>
+                <input type="text" id="Nome" disabled>
+            </p>
+
+            <p>
+                <label>Senha:</label>
+                <input type="password" id="Senha" disabled>
+            </p>
+
+            <p>
+                <label>Email:</label>
+                <input type="email" id="Email" disabled>
+            </p>
+
+            <p>
+                <label>Telefone:</label>
+                <input type="number" id="Telefone" disabled>
+            </p>
+
+            <p>
+                <label>CEP:</label>
+                <input type="number" id="CEP" disabled>
+            </p>
+
+            <p>
+                <label>Melhor dia para a entrega:</label>
+                <select id="MelhorDia" disabled>
+                    <option></option>
+                    <option id="Domingo">Domingo</option>
+                    <option value="Segunda">Segunda</option>
+                    <option value="Terca">Terça</option>
+                    <option value="Quarta">Quarta</option>
+                    <option value="Quinta">Quinta</option>
+                    <option value="Sexta">Sexta</option>
+                    <option value="Sabado">Sábado</option>
+                </select>
+            </p>
+
+            <p>
+                <label>Frequência:</label>
+                <p id="Frequencia">
+                    <p>
+                        <input id="Semanal" type="radio" name="Frequencia" disabled>
+                        <label>Semanal</label>
+                    </p>
+                    <p>
+                        <input id="Quinzenal" type="radio" name="Frequencia" disabled>
+                        <label>Quinzenal</label>
+                    </p>
+                    <p>
+                        <input id="Mensal" type="radio" name="Frequencia" disabled>
+                        <label>Mensal</label>
+                    </p>
+                </p>
+            </p>
+            <p>
+    </div>
+</body>
+</html>

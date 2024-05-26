@@ -15,58 +15,52 @@
         }
 
         /* Navegação */
-        ul{
-            display: flex;
-        }
-
-        nav ul li{
-            border: 1px solid black;
-            height: 40px;
-            border-radius: 10px;
-            margin-top: 5px;
-            display: flex;
-        }
-
-        nav ul li img{
-            width: 25px;
-            height: 25px;
-            margin-top: 5px;
-            margin-left: 10px;
-        }
-
-        nav ul li p{
-            margin-top: 10px;
-            margin-left: 3px;
-        }
-
         nav{
+            display: flex;
             background-color: #013C31;
-            height: 90px;
+            justify-content: space-around;
+        }
+
+        #logo{
             display: flex;
         }
 
-        #logo_nav{
+        #logo img{
             width: 75px;
             height: 75px;
-            flex-shrink: 0;
         }
 
-        nav h1{
+        #logo h1{
             width: 114px;
             height: 26px;
-            flex-shrink: 0;
             color: #FFA800;
-            font-family: Inter;
             font-size: 30px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
         }
+
+        ul{
+            display: flex;
+            list-style: none;
+        }
+
+        li{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            border-radius: 1em;
+        }
+
+        li img{
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
         /* Fim navegação */
 
         /* Botões */
         #mercado_botao{
-            margin-left: 30px;
             background-color: #429700;
             width: 120px;
         }
@@ -96,6 +90,8 @@
             background-color:#04D2FF;
             width: 120px;
             border: 0px solid;
+            display: flex;
+            justify-content: center;
         }
 
         #login_botao:hover{
@@ -103,14 +99,12 @@
             background-color: #06b3aa;
         }
 
-        #login_botao p{
-            margin-left: 40px;
-        }
-
         #cadastrar_botao{
             margin-left: 50px;
             background-color:#ffffff;
             width: 120px;
+            display: flex;
+            justify-content: center;
         }
 
         #cadastrar_botao:hover{
@@ -120,10 +114,6 @@
 
         #cadastrar_botao:active{
             background-color: #9b9b9b;
-        }
-
-        #cadastrar_botao p{
-            margin-left: 21px;
         }
         /* Fim Botões */
 
@@ -148,6 +138,10 @@
         /* Tutorial de como pedir */
         #Como_Pedir{
             margin: 20px;
+        }
+
+        #Como_Pedir h2{
+            color:#FFA800
         }
 
         #explicacoes{
@@ -200,6 +194,10 @@
             margin: 20px;
         }
 
+        #Saiba_Mais h2{
+            color:#FFA800
+        }
+
         #Saiba_Mais_quadros{
             display: flex;
             flex-wrap: wrap;
@@ -249,12 +247,16 @@
 
 <body>
     <nav>
-        <img src="Imagens/Logo_DaRoca.jpg" id="logo_nav">
+        <div id="logo">
+        <img src="Imagens/Logo_DaRoca.jpg">
         <h1>DaRoça</h1>
+        </div>
 
         <ul>
-            <li onclick="abrir_mercado()" id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
-            <li onclick="abrir_carrinho()" id="carrinho_botao"><img src="Imagens/Icone_Carrinho.png"><p>Carrinho</p></li>
+            <li onclick="abrir_mercado()" id="mercado_botao"><p>Mercado</p><img src="Imagens/Icone_Mercado.png"></li>
+            <li onclick="abrir_carrinho()" id="carrinho_botao"><p>Carrinho</p>  </li>
+        </ul>
+        <ul>
             <li onclick="abrir_login()" id="login_botao"><p>Login</p></li>
             <li onclick="abrir_cadastro()" id="cadastrar_botao"><p>Cadastre-se</p></li>
         </ul>
