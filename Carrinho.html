@@ -8,6 +8,7 @@
         body{
             background-color: #0F3C04;
             margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         ul{
@@ -51,7 +52,6 @@
             height: 26px;
             flex-shrink: 0;
             color: #FFA800;
-            font-family: Inter;
             font-size: 30px;
             font-style: normal;
             font-weight: 400;
@@ -86,41 +86,6 @@
             background-color: rgb(101, 138, 238);
         }
 
-        #login_botao{
-            margin-left: 600px;
-            background-color:#04D2FF;
-            width: 120px;
-            border: 0px solid;
-        }
-
-        #login_botao:hover{
-            cursor: pointer;
-            background-color: #06b3aa;
-        }
-
-        #login_botao p{
-            margin-left: 40px;
-        }
-
-        #cadastrar_botao{
-            margin-left: 50px;
-            background-color:#ffffff;
-            width: 120px;
-        }
-
-        #cadastrar_botao:hover{
-            cursor: pointer;
-            background-color: #d8d8d8;
-        }
-
-        #cadastrar_botao:active{
-            background-color: #9b9b9b;
-        }
-
-        #cadastrar_botao p{
-            margin-left: 21px;
-        }
-
         #titulo{
             display: flex;
             justify-content: center;
@@ -132,20 +97,12 @@
     </style>
 
     <script>  // java
-        function abrir_cadastro() {
-            location.href = 'Cadastro.html'
-        }
-        
         function abrir_mercado() {
             location.href = 'Mercado.html'
         }
 
-        function abrir_login() {
-            location.href = 'Login.html'
-        }
-
         function Retornar() {
-            location.href = 'DaRoca.html'
+            location.href = 'DaRoca_Conectado.html'
         }
 
     </script>
@@ -159,8 +116,6 @@
         <ul>
             <li onclick="abrir_mercado()" id="mercado_botao"><img src="Imagens/Icone_Mercado.png"><p>Mercado</p></li>
             <li onclick="Retornar()" id="inicio_botao"><p>Inicio</p></li>
-            <li onclick="abrir_login()" id="login_botao"><p>Login</p></li>
-            <li onclick="abrir_cadastro()" id="cadastrar_botao"><p>Cadastre-se</p></li>
         </ul>
     </nav>
 
