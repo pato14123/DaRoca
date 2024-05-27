@@ -145,6 +145,9 @@
         }
 
         function adicionar_ao_carrinho(){
+            for (let quant of document.querySelectorAll(".Adicionar_Retirar")){
+                quant.querySelector("p").innerHTML= "0"
+            }
             alert("Conecte-se Primeiro")
         }
 
