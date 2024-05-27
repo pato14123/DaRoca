@@ -1,0 +1,234 @@
+body{
+    background-color: #0F3C04;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Navegação */
+nav{
+    display: flex;
+    background-color: #013C31;
+    justify-content: space-around;
+}
+
+#logo{
+    display: flex;
+}
+
+#logo img{
+    width: 75px;
+    height: 75px;
+}
+
+#logo h1{
+    width: 114px;
+    height: 26px;
+    color: #FFA800;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+}
+
+li{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1em;
+}
+
+li img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+/* Fim navegação */
+
+/* Botões */
+/* Mercado */
+#mercado_botao{
+    background-color: #429700;
+    width: 120px;
+    border: 2px solid black;
+}
+
+#mercado_botao:hover{
+    cursor: pointer;
+    background-color: #317200;
+}
+
+#mercado_botao:active{
+    background-color: #1e4400;
+}
+
+/* Carrinho */
+#carrinho_botao{
+    margin-left: 30px;
+    background-color:#3CA1FE;
+    width: 120px;
+    border: 2px solid black;
+}
+
+#carrinho_botao:hover{
+    cursor: pointer;
+    background-color: rgb(101, 138, 238);
+}
+
+/* Feedback */
+
+#feedback_botao{
+    background-color: #429700;
+    margin-left: 20px;
+    width: 120px;
+    border: 2px solid black;
+}
+
+#feedback_botao:hover{
+    cursor: pointer;
+    background-color:#2CD333;
+}
+
+/* Perfil */
+#perfil{
+    background-color: #9b9b9b;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    border: 2px solid black;
+}
+
+#cabeca{
+    background-color: #000;
+    width: 18px;
+    height: 18px;
+    margin: 0px;
+    border-radius: 2em;
+}
+
+#corpo{
+    background-color: #000;
+    width: 35px;
+    height: 15px;
+    margin: 0px;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+#perfil:hover {
+    cursor: pointer;
+    background-color: rgb(192, 192, 192);
+}
+/* Fim Botões */
+
+/* Começo da pagina*/
+#Menu_info{
+    border-bottom: 1px solid #000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.25) 43%, rgba(0, 0, 0, 0.90) 84.5%), url("Imagens/Imagem_Bem_Vindo-Saiba_Mais3.jpg") lightgray 50% / cover no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    padding: 40px 20px;
+    justify-content: space-around;
+}
+
+#Menu_info h1, h2 {
+    color:#FFFFFF;
+    font-size: 50px;
+}
+/* Fim do começo da pagina */
+
+
+
+/* Tutorial de como pedir */
+#Como_Pedir{
+    margin: 20px;
+}
+
+#Como_Pedir h2{
+    color:#FFA800
+}
+
+#explicacoes{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.explicacao{
+    width: 250px;
+    font-size: x-large;
+}
+
+.n_passo{
+    background-color:#2CD333;
+    width: 100px;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+
+.n_passo p{
+    margin: 0px;
+}
+
+.texto_explicacao{
+    background-color:#2CD333;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 1.5em;
+    border-top-left-radius: 0em;
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.texto_explicacao p{
+    margin: 0px;
+}
+
+.texto_explicacao span{
+    font-weight: bold;
+}
+/* Fim do Tutorial "Como pedir" */
+
+/* Saiba Mais */
+#Saiba_Mais{
+    margin: 20px;
+}
+
+#Saiba_Mais h2{
+    color:#FFA800
+}
+
+#Saiba_Mais_quadros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.Saiba_Mais_itens{
+    background-color: #013C31;
+    width: 550px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 5em;
+    color: #FFFBE4;
+}
+
+.Saiba_Mais_itens img{
+    width: 410px;
+    height: 310px;
+}
+/* Fim saiba Mais */
