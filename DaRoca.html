@@ -63,6 +63,7 @@
         #mercado_botao{
             background-color: #429700;
             width: 120px;
+            border: 2px solid black;
         }
 
         #mercado_botao:hover{
@@ -78,6 +79,7 @@
             margin-left: 30px;
             background-color:#3CA1FE;
             width: 120px;
+            border: 2px solid black;
         }
 
         #carrinho_botao:hover{
@@ -92,6 +94,7 @@
             border: 0px solid;
             display: flex;
             justify-content: center;
+            border: 2px solid black;
         }
 
         #login_botao:hover{
@@ -105,6 +108,7 @@
             width: 120px;
             display: flex;
             justify-content: center;
+            border: 2px solid black;
         }
 
         #cadastrar_botao:hover{
@@ -114,6 +118,18 @@
 
         #cadastrar_botao:active{
             background-color: #9b9b9b;
+        }
+
+        #feedback_botao{
+            background-color:#2CD333;
+            margin-left: 20px;
+            width: 120px;
+            border: 2px solid black;
+        }
+
+        #feedback_botao:hover{
+            cursor: pointer;
+            background-color: #317200;
         }
         /* Fim Botões */
 
@@ -242,6 +258,10 @@
             alert("Conecte-se primeiro")
         }
 
+        function abrir_feedback(){
+            alert("Conecte-se primeiro")
+        }
+
     </script>
 </head>
 
@@ -255,6 +275,7 @@
         <ul>
             <li onclick="abrir_mercado()" id="mercado_botao"><p>Mercado</p><img src="Imagens/Icone_Mercado.png"></li>
             <li onclick="abrir_carrinho()" id="carrinho_botao"><p>Carrinho</p>  </li>
+            <li onclick="abrir_feedback()" id="feedback_botao"><p>Feedback</p></li>
         </ul>
         <ul>
             <li onclick="abrir_login()" id="login_botao"><p>Login</p></li>

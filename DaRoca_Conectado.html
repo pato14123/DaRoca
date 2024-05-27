@@ -64,6 +64,7 @@
         #mercado_botao{
             background-color: #429700;
             width: 120px;
+            border: 2px solid black;
         }
 
         #mercado_botao:hover{
@@ -80,11 +81,26 @@
             margin-left: 30px;
             background-color:#3CA1FE;
             width: 120px;
+            border: 2px solid black;
         }
 
         #carrinho_botao:hover{
             cursor: pointer;
             background-color: rgb(101, 138, 238);
+        }
+
+        /* Feedback */
+
+        #feedback_botao{
+            background-color: #429700;
+            margin-left: 20px;
+            width: 120px;
+            border: 2px solid black;
+        }
+
+        #feedback_botao:hover{
+            cursor: pointer;
+            background-color:#2CD333;
         }
 
         /* Perfil */
@@ -237,6 +253,10 @@
             location.href = 'perfil.html'
         }
 
+        function abrir_feedback(){
+            location.href = 'comentarios.html'
+        }
+
     </script>
 </head>
 
@@ -251,6 +271,7 @@
         <ul>
             <li onclick="abrir_mercado()" id="mercado_botao"><p>Mercado</p><img src="Imagens/Icone_Mercado.png"></li>
             <li onclick="abrir_carrinho()" id="carrinho_botao"><p>Carrinho</p><img src="Imagens/Icone_Carrinho.png"></li>
+            <li onclick="abrir_feedback()" id="feedback_botao"><p>Feedback</p></li>
         </ul>
         <ul>
             <li onclick="abrir_perfil()" id="perfil"><div id="cabeca"></div><div id="corpo"></div></li>
