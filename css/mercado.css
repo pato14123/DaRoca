@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    background-color: #0F3C04;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin: auto;
+    background-color: #013C31;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    display: flex;
+}
+
+#logo{
+    width: 75px;
+    height: 75px;
+}
+
+h1{
+    width: 114px;
+    height: 26px;
+    flex-shrink: 0;
+    color: #FFA800;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h2{
+    color: white;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+#Bem-Vindo{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.70) 56.5%), url(Imagens/Imagem_mercado.jpg) lightgray 50% / cover no-repeat;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#Selecionar{
+    text-align: center;
+    margin-top: 80px;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+}
+
+#Selecionar_Tipo{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-around;
+}
+
+.Opcoes{
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.Opcoes:hover{
+    cursor: pointer;
+    background-color: #329e17;
+}
+
+.Opcoes:active{
+    background-color: #1c580d;
+}
+
+#retornar_menuprincipal{
+    margin-right: 500px;
+    height: 50px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+#logo_menu{
+    display: flex;
+    margin-right: 600px;
+}
+
+#retornar_menuprincipal:hover{
+    cursor: pointer;
+    background-color: rgb(196, 196, 196);
+}
+
+#Selecionar_Produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.Produto{
+    width: 300px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Produto img{
+    width: 250px;
+    height: 232px;
+}
+
+.Adicionar_Retirar{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: flex-end;
+}
+
+.Adicionar{
+    width: 40px;
+    height: 40px;
+}
+
+.Retirar{
+    width: 40px;
+    height: 40px;
+}
+
+#botao_carrinho{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px
+}
+
+#adicionar_ao_carrinho{
+    background-color: rgb(144, 255, 144);
+    height: 120px;
+    width: 220px;
+    border: 2px solid black;
+    border-radius: 1em;
+}

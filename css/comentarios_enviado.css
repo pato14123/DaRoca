@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    background-color: #0F3C04;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin: auto;
+    background-color: #013C31;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    display: flex;
+}
+
+#logo{
+    width: 75px;
+    height: 75px;
+}
+
+h1{
+    width: 114px;
+    height: 26px;
+    flex-shrink: 0;
+    color: #FFA800;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#logo_menu{
+    display: flex;
+}
+
+#comentario_enviado{
+    background-color: white;
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1em;
+    margin-top: 30px;
+}
+
+#voltar{    
+    height: 50px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+#voltar:hover{
+    cursor: pointer;
+    background-color: rgb(196, 196, 196);
+}

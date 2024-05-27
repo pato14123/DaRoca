@@ -1,0 +1,108 @@
+body{
+    background-color: #0F3C04;
+    margin: 0px;
+}
+
+header{
+    margin: auto;
+    background-color: #013C31;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    display: flex;
+}
+
+#logo{
+    width: 75px;
+    height: 75px;
+}
+
+h1{
+    width: 114px;
+    height: 26px;
+    flex-shrink: 0;
+    color: #FFA800;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+div{
+    background-color: white;
+    width: 550px;
+    margin: auto;
+    padding: 10px;
+    
+}
+
+h2{
+    text-align: center;
+}
+
+form{
+    background-color: white;
+    margin: auto;
+}
+
+label{
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#Frequencia{
+    display: flex;
+    justify-content: space-between;
+}
+
+#Finalizar{
+    width: 156px;
+    height: 53px;
+    border-radius: 10px;
+    background-color: #3CDA2E;
+}
+
+#Finalizar:hover{
+    cursor: pointer;
+    background-color: #30b125;
+}
+
+#Finalizar:active{
+    background-color: #24831c;
+}
+
+#Apagar{
+    width: 156px;
+    height: 53px;
+    border-radius: 10px;
+    background-color: #F23D3D;
+}
+
+#Apagar:hover{
+    cursor: pointer;
+    background-color: #ce3232;
+}
+
+#Apagar:active{
+    background-color: #8b2121;
+}
+
+#Voltar{
+    width: 156px;
+    height: 53px;
+    border-radius: 10px;
+    background-color: #ECECEC;;
+}
+
+#Voltar:hover{
+    cursor: pointer;
+    background-color: #c5c5c5;
+}
+
+#Voltar:active{
+    background-color: #686868;
+}
