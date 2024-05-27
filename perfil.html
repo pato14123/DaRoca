@@ -57,10 +57,29 @@
         #Perfil{
             background-color: white;
             width: 600px;
-            height: 700px;
+            height: 500px;
             margin: auto;
             border: 1px solid black;
             padding: 10px;
+        }
+
+        #botoes{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #Alterar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #2CD333;
+        }
+
+        #Sair{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #F23D3D;
         }
     </style>
     <script>
@@ -76,6 +95,15 @@
 
         function Retornar(){
             location.href = "DaRoca_Conectado.html"
+        }
+
+        function Sair(){
+            location.href = "DaRoca.html"
+        }
+
+        // precisa programar
+        function Alterar(){ 
+            
         }
     </script>
 </head>
@@ -150,7 +178,11 @@
                     </p>
                 </p>
             </p>
-            <p>
+        </form>
+        <div id="botoes">
+            <button id="Alterar" onclick="Alterar()">alterar informações</button>
+            <button id="Sair" onclick="Sair()">desconectar</button>
+        </div>
     </div>
 </body>
 </html>
