@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: #0F3C04;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header{
+            margin: auto;
+            background-color: #013C31;
+            justify-content: center;
+            align-items: center;
+            height: 90px;
+            display: flex;
+        }
+
+        #logo{
+            width: 75px;
+            height: 75px;
+        }
+
+        h1{
+            width: 114px;
+            height: 26px;
+            flex-shrink: 0;
+            color: #FFA800;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        #retornar_menuprincipal{
+            margin-right: 500px;
+            height: 50px;
+            width: 100px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+
+        #logo_menu{
+            display: flex;
+            margin-right: 600px;
+        }
+
+        #retornar_menuprincipal:hover{
+            cursor: pointer;
+            background-color: rgb(196, 196, 196);
+        }
+
+        /* Comentario */
+        #comentario{
+            width: 400px;
+            height: 500px;
+            background-color: white;
+            margin: auto;
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        #comentario h2{
+            text-align: center;
+        }
+
+        textarea{
+            width: 200px;
+            min-width: 100px;
+            max-width: 300px;
+            height: 100px;
+            min-height: 50px;
+            max-height: 200px;
+        }
+    </style>
+    <script>
+        function Retornar() {
+            location.href = "DaRoca_Conectado.html"
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div>
+            <button id="retornar_menuprincipal" onclick="Retornar()">voltar</button>
+        </div>
+
+        <div id="logo_menu">
+            <img src="Imagens/Logo_DaRoca.jpg" id="logo">
+            <h1>DaRoça</h1>
+        </div>
+    </header>
+    <div id="comentario">
+        <h2>Comentário</h2>
+        <form>
+            <p>
+                <label>Assunto:</label>
+                <select>
+                    <option></option>
+                    <option>Comentário</option>
+                    <option>Sugestão</option>
+                    <option>Reclamação</option>
+                </select>
+            </p>
+            <p>
+                <label>Descrição:</label>
+                <p>
+                    <textarea placeholder="Escreva seu comentário"></textarea>
+                </p>
+            </p>
+            <input type="reset">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>
