@@ -62,6 +62,9 @@
             margin: auto;
             border: 1px solid black;
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
         }
 
         #comentario h2{
@@ -76,10 +79,52 @@
             min-height: 50px;
             max-height: 200px;
         }
+
+        #botoes{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #enviar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #3CDA2E;
+        }
+
+        #enviar:hover{
+            cursor: pointer;
+            background-color: #30b125;
+        }
+
+        #enviar:active{
+            background-color: #24831c;
+        }
+
+        #limpar{
+            width: 156px;
+            height: 53px;
+            border-radius: 10px;
+            background-color: #F23D3D;
+        }
+
+        #limpar:hover{
+            cursor: pointer;
+            background-color: #ce3232;
+        }
+
+        #limpar:active{
+            background-color: #8b2121;
+        }
     </style>
     <script>
-        function Retornar() {
+        function Retornar(){
             location.href = "DaRoca_Conectado.html"
+        }
+
+        function Concluir(){
+            event.preventDefault()
+            location.href = 'comentarios_enviado.html'
         }
     </script>
 </head>
@@ -95,25 +140,30 @@
         </div>
     </header>
     <div id="comentario">
-        <h2>Comentário</h2>
-        <form>
-            <p>
-                <label>Assunto:</label>
-                <select>
-                    <option></option>
-                    <option>Comentário</option>
-                    <option>Sugestão</option>
-                    <option>Reclamação</option>
-                </select>
-            </p>
-            <p>
-                <label>Descrição:</label>
+        <form id="descricao">
+            <h2>Comentário</h2>
+            <div>
                 <p>
-                    <textarea placeholder="Escreva seu comentário"></textarea>
+                    <label>Assunto:</label>
+                    <select>
+                        <option></option>
+                        <option>Comentário</option>
+                        <option>Sugestão</option>
+                        <option>Reclamação</option>
+                    </select>
                 </p>
-            </p>
-            <input type="reset">
-            <input type="submit">
+                <p>
+                    <label>Descrição:</label>
+                    <p>
+                        <textarea placeholder="Escreva seu comentário"></textarea>
+                    </p>
+                </p>
+            </div>
+        </form>
+        
+        <form id="botoes" onsubmit="Concluir()">
+            <input type="reset" value="Limpar" id="limpar">
+            <input type="submit" value="Enviar" id="enviar">
         </form>
     </div>
 </body>
