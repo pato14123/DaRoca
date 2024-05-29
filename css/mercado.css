@@ -39,7 +39,7 @@ h2{
 }
 
 #Bem-Vindo{
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.70) 56.5%), url(Imagens/Imagem_mercado.jpg) lightgray 50% / cover no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.70) 56.5%), url('../Imagens/Imagem_mercado.jpg') lightgray 50% / cover no-repeat;
     height: 400px;
     align-items: center;
     justify-content: center;
