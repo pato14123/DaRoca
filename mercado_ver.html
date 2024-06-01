@@ -23,9 +23,6 @@
         }
 
         function adicionar_ao_carrinho(){
-            for (let quant of document.querySelectorAll(".Adicionar_Retirar")){
-                quant.querySelector("p").innerHTML= "0"
-            }
             alert("Conecte-se Primeiro")
         }
 
@@ -46,15 +43,19 @@
                 mudar_BG("Frutas")
             }
             else if (tipo == "Vegetais"){
+                colocar_produtos("Vegetais")
                 mudar_BG("Vegetais")
             }
             else if (tipo == "Frios"){
+                colocar_produtos("Frios")
                 mudar_BG("Frios")
             }
             else if (tipo == "Bebidas"){
+                colocar_produtos("Bebidas")
                 mudar_BG("Bebidas")
             }
             else if (tipo == "Alimentos"){
+                colocar_produtos("Alimentos")
                 mudar_BG("Alimentos")
             }
         }
