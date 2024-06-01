@@ -15,8 +15,15 @@ function colocar_produtos(tipo){
             // })
 
             fetch('http://127.0.0.1:5500/produtos.json')
-            .then((response) => response.json())
-            .then((json) => console.log(json))
+            .then(response => response.json())
+            .then(data => {
+                // Acessar os dados
+                const produtos = data.produtos
+                produtos.forEach(nome => {
+                    console.log(produtos)
+                })
+            })
+
         //     document.querySelector('#Selecionar_Produtos').innerHTML = ""
         //     for(let indice = 0; indice < produtos.length; indice++){
 
