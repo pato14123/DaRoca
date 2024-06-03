@@ -9,54 +9,26 @@
     <!-- Não Funcionando -->
     <script>
         function adicionar(produto){
-            let quantidade = produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML
-            let aumentar_quantidade = Number(quantidade) + 1
-            produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML = aumentar_quantidade
+            alert("Conecte-se Primeiro")
         }
 
         function retirar(produto){
-            let quantidade = produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML
-            if (Number(quantidade) != 0){
-                let aumentar_quantidade = Number(quantidade) - 1
-                produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML = aumentar_quantidade
-            }
+            alert("Conecte-se Primeiro")
         }
 
         function adicionar_ao_carrinho(){
             alert("Conecte-se Primeiro")
         }
 
-        function mudar_BG(nome){
+        function Mudar(tipo){
+            colocar_produtos(tipo)
             for (let i of document.querySelectorAll(".Opcoes")){
-                if (i.querySelector("p").innerHTML == nome){
+                if (i.querySelector("p").innerHTML == tipo){
                     i.style.backgroundColor = "#329e17"
                 }
                 else{
                     i.style.backgroundColor = ""
                 }
-            }
-        }
-        
-        function identificar_selecionado(tipo){
-            if (tipo == "Frutas"){
-                colocar_produtos("Frutas")
-                mudar_BG("Frutas")
-            }
-            else if (tipo == "Vegetais"){
-                colocar_produtos("Vegetais")
-                mudar_BG("Vegetais")
-            }
-            else if (tipo == "Frios"){
-                colocar_produtos("Frios")
-                mudar_BG("Frios")
-            }
-            else if (tipo == "Bebidas"){
-                colocar_produtos("Bebidas")
-                mudar_BG("Bebidas")
-            }
-            else if (tipo == "Alimentos"){
-                colocar_produtos("Alimentos")
-                mudar_BG("Alimentos")
             }
         }
 
@@ -65,7 +37,7 @@
         }
     </script>
 </head>
-<body>
+<body onload="Mudar()">
     
     <header>
         <div>
@@ -83,25 +55,25 @@
     </div>
 
     <div id="Selecionar">
-        <h3>Selecione o tipo de Mercadoria que deseja procurar</h3>
+        <h3>Tipos de Mercadorias:</h3>
         <div id="Selecionar_Tipo">
-            <div onclick="identificar_selecionado('Frutas')" class="Opcoes">
+            <div onclick="Mudar('Frutas')" class="Opcoes" id="Frutas">
                 <p>Frutas</p>
             </div>
             
-            <div onclick="identificar_selecionado('Vegetais')" class="Opcoes">
+            <div onclick="Mudar('Vegetais')" class="Opcoes" id="Vegetais">
                 <p>Vegetais</p>
             </div>
 
-            <div onclick="identificar_selecionado('Frios')" class="Opcoes">
+            <div onclick="Mudar('Frios')" class="Opcoes" id="Frios">
                 <p>Frios</p>
             </div>
 
-            <div onclick="identificar_selecionado('Bebidas')" class="Opcoes">
+            <div onclick="Mudar('Bebidas')" class="Opcoes" id="Bebidas">
                 <p>Bebidas</p>
             </div>
 
-            <div onclick="identificar_selecionado('Alimentos')" class="Opcoes">
+            <div onclick="Mudar('Alimentos')" class="Opcoes" id="Alimentos">
                 <p>Alimentos</p>
             </div>
         </div>
