@@ -33,7 +33,7 @@
       <x>10</x>
       <y>1</y>
       <width>541</width>
-      <height>161</height>
+      <height>181</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
@@ -65,7 +65,11 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QDoubleSpinBox" name="spbvalor"/>
+      <widget class="QDoubleSpinBox" name="spbvalor">
+       <property name="decimals">
+        <number>2</number>
+       </property>
+      </widget>
      </item>
      <item row="2" column="0">
       <widget class="QLabel" name="label_3">

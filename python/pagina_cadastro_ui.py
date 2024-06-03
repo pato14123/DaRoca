@@ -31,7 +31,7 @@ class Ui_janela_cadastro(object):
         self.btnCadastrar.setGeometry(QRect(450, 180, 101, 31))
         self.widget = QWidget(self.centralwidget)
         self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(10, 1, 541, 161))
+        self.widget.setGeometry(QRect(10, 1, 541, 181))
         self.gridLayout = QGridLayout(self.widget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
@@ -56,6 +56,7 @@ class Ui_janela_cadastro(object):
 
         self.spbvalor = QDoubleSpinBox(self.widget)
         self.spbvalor.setObjectName(u"spbvalor")
+        self.spbvalor.setDecimals(2)
 
         self.gridLayout.addWidget(self.spbvalor, 1, 1, 1, 1)
 
