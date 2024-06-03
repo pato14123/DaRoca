@@ -45,7 +45,7 @@ function colocar_produtos(tipo){
         
                         //imagem
                         let imagem = document.createElement('img')
-                        imagem.setAttribute("src", "daroca-api/imagens/" + produtos[indice].imagem)
+                        imagem.setAttribute("src", "daroca-api/imagens_de_produtos/" + produtos[indice].imagem)
                         document.getElementById(produtos[indice].id).appendChild(imagem)
         
                         //botões
