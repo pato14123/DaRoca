@@ -7,7 +7,7 @@
         {"nome": "Maracujás(unidade)", "valor": "1,99", "imagem": "Maracujas.png", "id":"Maracujas", "tipo": "Frutas"},
         {"nome": "Brócolis (quantidade em kilogramas)", "valor": "5,99", "imagem": "brocolis.png", "id": "Brocolis", "tipo": "Vegetais"},
         {"nome": "Alho (quantidade em kilogramas)", "valor": "32,99", "imagem": "alho.png", "id": "Alho", "tipo": "Vegetais"},
-        {"nome": "Cebola (quantidade em kilogramas)", "valor": "R$6,59", "imagem": "cebola.png", "id": "Cebola", "tipo": "Vegetais"},
+        {"nome": "Cebola (quantidade em kilogramas)", "valor": "6,59", "imagem": "cebola.png", "id": "Cebola", "tipo": "Vegetais"},
         {"nome": "Cenoura (quantidade em kilogramas)", "valor": "5,99", "imagem": "cenoura.png", "id": "Cenoura", "tipo": "Vegetais"},
         {"nome": "Pimentão (quantidade em kilogramas)", "valor": "24,99", "imagem": "pimentao.png", "id":"Pimentao", "tipo": "Vegetais"},
         {"nome": "Salsicha (quantidade em kilogramas)", "valor": "32,99", "imagem": "salsicha.png", "id": "Salsicha", "tipo": "Frios"},
