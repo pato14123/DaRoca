@@ -67,25 +67,18 @@ function colocar_produtos(tipo){
                             document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(botao_retirar)
                             document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(quant)
                             document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(botao_adicionar)
+
+                            //adicionar ao carrinho
+                            let botao_carrinho = document.createElement('button')
+                            botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
+                            botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho()')
+                            botao_carrinho.innerHTML='Adicionar ao carrinho'
+                            document.getElementById(produtos[indice].id).appendChild(botao_carrinho)
+                            
                             window.location.href = "#Selecionar_Produtos"
+
                         }
                     }
-                    try{
-                    document.querySelector('#adicionar_ao_carrinho').remove()
-                    let botao_carrinho = document.createElement('button')
-                    botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
-                    botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho()')
-                    botao_carrinho.innerHTML='Adicionar ao carrinho'
-                    document.querySelector('#botao_carrinho').appendChild(botao_carrinho)
-                    }
-            
-                    catch{
-                    let botao_carrinho = document.createElement('button')
-                    botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
-                    botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho()')
-                    botao_carrinho.innerHTML='Adicionar ao carrinho'
-                    document.querySelector('#botao_carrinho').appendChild(botao_carrinho)
-                }
             }
             
             else{
@@ -132,24 +125,15 @@ function colocar_produtos(tipo){
                         document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(botao_retirar)
                         document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(quant)
                         document.getElementById(produtos[indice].id).querySelector('.Adicionar_Retirar').appendChild(botao_adicionar)
+
+                        //adicionar ao carrinho
+                        let botao_carrinho = document.createElement('button')
+                        botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
+                        botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho()')
+                        botao_carrinho.innerHTML='Adicionar ao carrinho'
+                        document.getElementById(produtos[indice].id).appendChild(botao_carrinho)
                     }
                 }
-                try{
-                document.querySelector('#adicionar_ao_carrinho').remove()
-                let botao_carrinho = document.createElement('button')
-                botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
-                botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho()')
-                botao_carrinho.innerHTML='Adicionar ao carrinho'
-                document.querySelector('#botao_carrinho').appendChild(botao_carrinho)
-                }
-        
-                catch{
-                let botao_carrinho = document.createElement('button')
-                botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
-                botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho()')
-                botao_carrinho.innerHTML='Adicionar ao carrinho'
-                document.querySelector('#botao_carrinho').appendChild(botao_carrinho)
-            }
         }
     )    
 }
