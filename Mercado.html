@@ -23,20 +23,38 @@
             }
         }
 
-        function adicionar_ao_carrinho(){
-            for (let quant of document.querySelectorAll(".Adicionar_Retirar")){
-                quant.querySelector("p").innerHTML= "0"
+        function adicionar_ao_carrinho(produto){
+            let quantidade_produto = produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML
+            if (quantidade_produto != 0){
+                produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML = 0
             }
         }
 
         function Mudar(tipo){
-            colocar_produtos(tipo)
-            for (let i of document.querySelectorAll(".Opcoes")){
-                if (i.querySelector("p").innerHTML == tipo){
-                    i.style.backgroundColor = "#329e17"
-                }
-                else{
+            if(tipo == null){
+                colocar_produtos(tipo)
+                document.querySelector("#Frutas").setAttribute("onclick", "Mudar(Frutas)")
+                document.querySelector("#Vegetais").setAttribute("onclick", "Mudar(Vegetais)")
+                document.querySelector("#Frios").setAttribute("onclick", "Mudar(Frios)")
+                document.querySelector("#Bebidas").setAttribute("onclick", "Mudar(Bebidas)")
+                document.querySelector("#Alimentos").setAttribute("onclick", "Mudar(Alimentos)")
+                for (let i of document.querySelectorAll(".Opcoes")){
                     i.style.backgroundColor = ""
+                }
+            }
+            else{
+                tipo.setAttribute("onclick", "Mudar(null)")
+                let tipo_de_produto = tipo.querySelector("p").innerHTML
+                colocar_produtos(tipo_de_produto)
+
+                for (let i of document.querySelectorAll(".Opcoes")){
+                    if (i == tipo){
+                        i.style.backgroundColor = "#329e17"
+                    }
+
+                    else{
+                        i.style.backgroundColor = ""
+                    }
                 }
             }
         }
@@ -46,7 +64,7 @@
         }
     </script>
 </head>
-<body onload="Mudar()">
+<body onload="Mudar(null)">
     
     <header>
         <div>
