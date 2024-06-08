@@ -46,6 +46,58 @@ def inserir():
  
         meuCursor.commit() # enviar as mudanças para o BD
 
+def excluir():
+    meuCursor = conexao.cursor() # objeto de manipulação de dados
+    nome_produto = "1"
+    while nome_produto != "0":
+        nome_produto = input("Nome do Produto (0 para terminar): ")
+        if nome_produto != "0": 
+            result = meuCursor.execute('SELECT nome, imagem, valor, descricao, categoria '+\
+                                      ' FROM daroca.produtos '+\
+                                      ' WHERE nome = ?', nome_produto)
+            registros = result.fetchall()
+            if len(registros) == 0:
+                print("Produto não encontrado.")
+            else:
+                print("Produto encontrado:")
+                nome = registros[0][0]
+                imagem = registros[0][1]
+                valor = registros[0][2]
+                descricao = registros[0][3]
+                categoria = registros[0][4]
+                if nome != None:
+                    print("Nome do departamento: " + nome)
+                else:
+                    print("Nome não informado")
+                if imagem != None:
+                    print("imagem:" + imagem)
+                else:
+                    print("Imagem Não informada")
+                if valor != None:
+                    print("valor:" + valor)
+                else:
+                    print("Valor não informado")
+                if descricao != None:
+                    print("descição:" + descricao)
+                else:
+                    print("descrição Não informado")
+                if categoria != None:
+                    print("Categoria:" + categoria)
+                else:
+                    print("Categoria Não informada\n")
+ 
+                resposta = input("Deseja realmente excluir (s/n)?")
+                if resposta == "s":
+                    # criamos uma string com o comando Delete para excluir o registro lido
+                    sComando = "Delete from daroca.produtos " +\
+                    " where nome = ? "
+                    try: # tente executar o comando abaixo:
+                        meuCursor.execute(sComando, nome)
+                    except: # em caso de erro
+                        print("Não foi possível excluir. Deve ser um departamento em uso.")
+ 
+                    meuCursor.commit() # enviar as mudanças para o BD 
+
 def listar():
     meuCursor = conexao.cursor() # objeto de manipulação de dados
     try: 
@@ -57,7 +109,7 @@ def listar():
 
     print("Nome. valor. Descrição, imagem. Categoria.")
     print(registros)
-    
+
     for dados in registros:
         print(f"{dados[0]}\t {dados[1]}\t {dados[2]}\t {dados[3]}\t {dados[4]}")
  
