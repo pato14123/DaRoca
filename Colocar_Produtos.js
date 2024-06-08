@@ -1,9 +1,4 @@
 //Não funcionando
-
-function exibeDados(dados){
-    document.querySelector("#listaProdutos").innerHTML = dados[0].imagem
-}
-
 function colocar_produtos(tipo){
             // fetch('http://localhost:3000/produtos')
             // .then(resposta => {
@@ -71,7 +66,7 @@ function colocar_produtos(tipo){
                             //adicionar ao carrinho
                             let botao_carrinho = document.createElement('button')
                             botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
-                            botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho()')
+                            botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho('+produtos[indice].id+')')
                             botao_carrinho.innerHTML='Adicionar ao carrinho'
                             document.getElementById(produtos[indice].id).appendChild(botao_carrinho)
                             
@@ -129,11 +124,11 @@ function colocar_produtos(tipo){
                         //adicionar ao carrinho
                         let botao_carrinho = document.createElement('button')
                         botao_carrinho.setAttribute('id', 'adicionar_ao_carrinho')
-                        botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho()')
+                        botao_carrinho.setAttribute('onclick', 'adicionar_ao_carrinho('+produtos[indice].id+')')
                         botao_carrinho.innerHTML='Adicionar ao carrinho'
                         document.getElementById(produtos[indice].id).appendChild(botao_carrinho)
                     }
-                }
+            }
         }
     )    
 }
