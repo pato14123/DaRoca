@@ -1,9 +1,4 @@
 //Não funcionando
-
-function exibeDados(dados){
-    document.querySelector("#listaProdutos").innerHTML = dados[0].imagem
-}
-
 function colocar_produtos(tipo){
             // fetch('http://localhost:3000/produtos')
             // .then(resposta => {

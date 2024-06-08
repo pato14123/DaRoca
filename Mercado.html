@@ -26,6 +26,7 @@
         function adicionar_ao_carrinho(produto){
             let quantidade_produto = produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML
             if (quantidade_produto != 0){
+                console.log(produto)
                 produto.querySelector(".Adicionar_Retirar").querySelector('p').innerHTML = 0
             }
         }
