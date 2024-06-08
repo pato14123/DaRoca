@@ -45,6 +45,23 @@ def inserir():
             print("Não foi possível incluir. Pode haver depto repetido.")
  
         meuCursor.commit() # enviar as mudanças para o BD
+
+def listar():
+    meuCursor = conexao.cursor() # objeto de manipulação de dados
+    try: 
+        result = meuCursor.execute('SELECT nome, imagem, valor, descricao, categoria'+\
+                                   'FROM daroca.produtos') 
+        registros = result.fetchall()
+    except:
+            print("Erro na busca dos dados\n")
+
+    print("Nome. valor. Descrição, imagem. Categoria.")
+    print(registros)
+    
+    for dados in registros:
+        print(f"{dados[0]}\t {dados[1]}\t {dados[2]}\t {dados[3]}\t {dados[4]}")
+ 
+    input("Tecle [enter] para terminar:")
     
 def seletor(): # CRUD: Create Retrieve Update Delete
     opcao = 1
