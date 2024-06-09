@@ -151,7 +151,7 @@ function remover_do_carrinho(produto){
     let produto_remover_carrinho = produto[1]
     for(let i = 0; i < produtos_no_carrinho.length; i++){
         if(produtos_no_carrinho[i].id == produto_remover_carrinho.getAttribute("id")){
-            produtos_no_carrinho.splice(i, i)
+            produtos_no_carrinho.splice(i, 1)
             i = produtos_no_carrinho.length
         }
     }
