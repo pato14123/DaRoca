@@ -86,7 +86,7 @@
             <h1>DaRoça</h1>
         </div>
 
-        <button onclick="mostrar_dialog()">dialog</button>
+        <button onclick="mostrar_dialog()">Carrinho</button>
 
     </header>
 
@@ -123,19 +123,19 @@
 
     </div>
 
+    <!-- Dialog/Carrinho -->
     <dialog>
         <h3>Carrinho</h3>
         <div id="produtos">
 
         </div>
         <div id="valor">
-        <p>Valor total</p>
-        <p>R$ 18,99</p>
+            <p>Valor total</p>
         </div>
         <div id="botoes">
-            <button>Voltar</button>
-            <button>Limpar</button>
-            <button>Pagar</button>
+            <button onclick="fechar_carrinho()">Voltar</button>
+            <button onclick="tirar_todos_carrinho()">Limpar</button>
+            <button onclick="ir_para_pagamento()">Pagar</button>
         </div>
     </dialog>
 

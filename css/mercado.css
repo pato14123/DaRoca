@@ -145,3 +145,45 @@ h2{
     border: 2px solid black;
     border-radius: 1em;
 }
+
+/* Dialog/Carrinho */
+dialog
+{
+    width: 1000px;
+}
+
+dialog #produtos div
+{
+    display: flex;
+}
+
+dialog #titulos
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+
+}
+
+dialog #titulo_imagem
+{
+    width: 100px;
+}
+
+dialog .produtos_no_carrinho
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+
+dialog .produtos_no_carrinho img
+{
+    width: 100px;
+    height: 100px;
+}
