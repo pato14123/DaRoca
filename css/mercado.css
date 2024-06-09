@@ -146,6 +146,24 @@ h2{
     border-radius: 1em;
 }
 
+#carrinho
+{
+    padding: 10px;
+    border-radius: 1rem;
+    background-color: #3CA1FE;
+    color: #383838;
+}
+
+#carrinho:hover
+{
+    background-color: #658aee;
+}
+
+#carrinho:active
+{
+    background-color: #04D2FF;
+}
+
 /* Dialog/Carrinho */
 dialog
 {
@@ -192,4 +210,61 @@ dialog .produtos_no_carrinho img
 {
     width: 100px;
     height: 100px;
+}
+
+dialog #voltar
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ECECEC;;
+}
+
+dialog #voltar:hover
+{
+    cursor: pointer;
+    background-color: #c5c5c5;
+}
+
+dialog #voltar:active
+{
+    background-color: #686868;
+}
+
+dialog #limpar
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #F23D3D;
+}
+
+dialog #limpar:hover
+{
+    cursor: pointer;
+    background-color: #ce3232;
+}
+
+dialog #limpar:active
+{
+    background-color: #8b2121;
+}
+
+dialog #pagar
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #3CDA2E;
+}
+
+dialog #pagar:hover
+{
+    cursor: pointer;
+    background-color: #30b125;
+}
+
+dialog #pagar:active
+{
+    background-color: #24831c;
 }

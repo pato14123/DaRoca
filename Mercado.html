@@ -61,10 +61,6 @@
             }
         }
 
-        function Retornar(){
-            location.href = "DaRoca.html"
-        }
-
         function mostrar_dialog(){
             dialog = document.querySelector("dialog")
             salvar_produtos_colocados()
@@ -78,7 +74,7 @@
     
     <header>
         <div>
-            <button id="retornar_menuprincipal" onclick="Retornar()">voltar</button>
+            <a href="DaRoca_Conectado.html"><button id="retornar_menuprincipal">voltar</button></a>
         </div>
 
         <div id="logo_menu">
@@ -86,7 +82,7 @@
             <h1>DaRoça</h1>
         </div>
 
-        <button onclick="mostrar_dialog()">Carrinho</button>
+        <button onclick="mostrar_dialog()" id="carrinho">Carrinho</button>
 
     </header>
 
@@ -133,9 +129,9 @@
             <p>Valor total</p>
         </div>
         <div id="botoes">
-            <button onclick="fechar_carrinho()">Voltar</button>
-            <button onclick="tirar_todos_carrinho()">Limpar</button>
-            <button onclick="ir_para_pagamento()">Pagar</button>
+            <button onclick="fechar_carrinho()" id="voltar">Voltar</button>
+            <button onclick="tirar_todos_carrinho()" id="limpar">Limpar</button>
+            <button onclick="ir_para_pagamento()" id="pagar">Pagar</button>
         </div>
     </dialog>
 
