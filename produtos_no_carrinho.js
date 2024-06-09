@@ -1,4 +1,5 @@
 var produtos_no_carrinho = []
+var soma = 0
 
 function colocar_produto(produto){
     let identificador = produto.getAttribute("id")
@@ -59,7 +60,7 @@ function mostrar_produtos_dialog(){
     .then(data => {
         const todos_os_produtos = data.produtos
         let produtos_salvos = JSON.parse(localStorage.getItem('produtos') || '[]')
-        let soma = 0
+        soma = 0
         if(produtos_salvos.length != 0){
             for(let i = 0; i < produtos_salvos.length; i++){
                 for(let indice = 0; indice < todos_os_produtos.length; indice++){
@@ -171,9 +172,15 @@ function tirar_todos_carrinho(){
 
 function ir_para_pagamento(){
     if(produtos_no_carrinho.length != 0){
+        localStorage.setItem("valor_total", soma)
         location.href = "pagamento.html"
     }
     else{
         alert("CARRINHO VAZIO!")
     }
+}
+
+function mostrar_total(){
+    let valor_total_compra = JSON.parse(localStorage.getItem('valor_total') || '[]')
+    document.querySelector("#total").innerHTML = "total a pagar: R$"+valor_total_compra
 }

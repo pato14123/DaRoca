@@ -66,19 +66,6 @@ li img{
     background-color: #1e4400;
 }
 
-/* Carrinho */
-#carrinho_botao{
-    margin-left: 30px;
-    background-color:#3CA1FE;
-    width: 120px;
-    border: 2px solid black;
-}
-
-#carrinho_botao:hover{
-    cursor: pointer;
-    background-color: rgb(101, 138, 238);
-}
-
 /* Feedback */
 
 #feedback_botao{

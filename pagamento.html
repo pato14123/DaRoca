@@ -4,9 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/mercado.css">
+    <link rel="stylesheet" href="css/pagamento.css">
+    <script src="produtos_no_carrinho.js"></script>
+
+    <script>
+        function verificar(){
+            event.preventDefault()
+            let banco = verificar_banco()
+            let numero_cartao = verificar_num_cartao()
+            let data_validade = verificar_data_validade()
+            let CVC = verificar_CVC_CVV()
+            if(banco == false || numero_cartao == false || data_validade == false || CVC == false){
+                alert("Alguma informação está com valores errados")
+            }
+            else{
+                dialog = document.querySelector("dialog")
+                dialog.showModal()
+            }
+        }
+
+        function verificar_banco(){
+            let banco = document.querySelector("#banco").value
+            if(banco != ""){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+
+        function verificar_num_cartao(){
+            let num_cartao = document.querySelector("#num_cartao").value
+            if(num_cartao.length == 16){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+
+        function verificar_data_validade(){
+            let data = document.querySelector("#data_validade").value
+            if(data.length == 0){
+                return false
+            }
+            else{
+                return true
+            }
+        }
+
+        function verificar_CVC_CVV(){
+            let CVC_CVV = document.querySelector("#CVC_CVV").value
+            if(CVC_CVV.length == 3){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+
+    </script>
 </head>
-<body>
-    
+<body onload="mostrar_total()">
+    <header>
+
+        <div id="logo_menu">
+            <img src="Imagens/Logo_DaRoca.jpg" id="logo">
+            <h1>DaRoça</h1>
+        </div>
+    </header>
+    <div id="pagamento">
+
+        <h2>Pagamento</h2>
+        <p id="total"></p>
+
+        <form onsubmit="verificar()">
+            <div>
+                <label>Banco</label>
+                <select id="banco">
+                    <option></option>
+                    <option>Banco do Brasil</option>
+                    <option>Caixa Econômica Federal</option>
+                    <option>Bradesco</option>
+                    <option>Itaú Unibanco</option>
+                    <option>Santander Brasil</option>
+                    <option>Banco Safra</option>
+                    <option>Banco BTG Pactual</option>
+                    <option>Banco Original</option>
+                    <option>Banco Inter</option>
+                    <option>Nubank</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Numero do cartão:</label>
+                <input type="number" placeholder="1234123412341234" id="num_cartao">
+            </div>
+
+            <div>
+                <label>data da validade:</label>
+                <input type="month" id="data_validade">
+            </div>
+
+            <div>
+                <label>Codigo de segurança(CVC/CVV):</label>
+                <input type="number" placeholder="000" id="CVC_CVV">
+            </div>
+
+            <div id="botoes">
+                <a href="Mercado.html"><button type="button" id="voltar">Voltar</button></a>
+                <button type="reset" id="apagar">Limpar dados escritos</button>
+                <button type="submit" id="finalizar">Pagar</button>
+            </div>
+        </form>
+
+    </div>
+    <dialog>
+        <h2>Pagamento aprovado</h2>
+        <p>O seu pedido está a caminho</p>
+        <a href="DaRoca_Conectado.html"><button>Voltar</button></a>
+    </dialog>
 </body>
 </html>

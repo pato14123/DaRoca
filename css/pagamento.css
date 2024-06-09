@@ -1,11 +1,12 @@
-body{
+body
+{
     margin: 0;
     background-color: #0F3C04;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
-    margin: auto;
+header
+{
     background-color: #013C31;
     justify-content: center;
     align-items: center;
@@ -13,12 +14,19 @@ header{
     display: flex;
 }
 
-#logo{
+#logo
+{
     width: 75px;
     height: 75px;
 }
 
-h1{
+#logo_menu
+{
+    display: flex;
+}
+
+h1
+{
     width: 114px;
     height: 26px;
     flex-shrink: 0;
@@ -28,3 +36,88 @@ h1{
     font-weight: 400;
     line-height: normal;
 }
+
+#pagamento
+{
+    background-color: #ffffff;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 10px;
+    
+}
+
+#pagamento form
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 200px;
+    border-top: 1px solid #000000;
+}
+
+#pagamento #botoes
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#voltar
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ECECEC;;
+}
+
+#voltar:hover
+{
+    cursor: pointer;
+    background-color: #c5c5c5;
+}
+
+#voltar:active
+{
+    background-color: #686868;
+}
+
+#apagar
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #F23D3D;
+}
+
+#apagar:hover
+{
+    cursor: pointer;
+    background-color: #ce3232;
+}
+
+#apagar:active
+{
+    background-color: #8b2121;
+}
+
+#finalizar
+{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #3CDA2E;
+}
+
+#finalizar:hover
+{
+    cursor: pointer;
+    background-color: #30b125;
+}
+
+#finalizar:active
+{
+    background-color: #24831c;
+}
+
+
