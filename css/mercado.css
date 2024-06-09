@@ -157,6 +157,12 @@ dialog #produtos div
     display: flex;
 }
 
+dialog #produtos
+{
+    overflow-y: scroll;
+    height: 500px;
+}
+
 dialog #titulos
 {
     display: flex;
