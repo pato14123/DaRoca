@@ -1,12 +1,8 @@
 //Não funcionando
 function colocar_produtos(tipo){
             // fetch('http://localhost:3000/produtos')
-            // .then(resposta => {
-            //     return resposta.json()
-            // })
-            // .then( (dados) => {
-            //     console.log(dados)
-            //     exibeDados(dados)
+            // .then(resposta => {return resposta.json()})
+            // .then(dados => {
             // })
 
             fetch('http://127.0.0.1:5500/produtos.json')

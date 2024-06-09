@@ -26,7 +26,7 @@ function colocar_produto(produto){
     }
 }
 
-function ir_ao_carrinho(){
+function salvar_produtos_colocados(){
     var lista_produtos_guardados = JSON.parse(localStorage.getItem('produtos') || '[]')
     let achou = false
 
@@ -44,20 +44,33 @@ function ir_ao_carrinho(){
         console.log(lista_produtos_guardados)
     }
     localStorage.setItem("produtos", JSON.stringify(lista_produtos_guardados))
-    window.location.href = 'teste.html'
 }
 
-function Aparecer(){
-    console.log(localStorage)
-    var produtos = JSON.parse(localStorage.getItem('produtos') || '[]')
-    console.log(produtos)
-}
+function mostrar_produtos_dialog(){
+        // fetch('http://localhost:3000/produtos')
+        // .then(resposta => {return resposta.json()})
+        // .then(dados => {
+        // })
+    fetch('http://127.0.0.1:5500/produtos.json')
+    .then(response => response.json())
+    .then(data => {
+        const todos_os_produtos = data.produtos
+        let produtos_salvos = JSON.parse(localStorage.getItem('produtos') || '[]')
+        if(produtos_salvos.length != 0){
+            for(let i = 0; i < produtos_salvos.length; i++){
+                for(let indice = 0; indice < todos_os_produtos.length; indice++){
+                    if(produtos_salvos[i].id == todos_os_produtos[indice].id){
 
-function Voltar(){
-    window.location.href = 'Mercado.html'
-}
+                        let div = document.createElement("div")
+                        div.setAttribute("id",todos_os_produtos[indice].id)
+                        document.querySelector('dialog').querySelector("#produtos").appendChild(div)
 
-function limpar(){
-    localStorage.clear()
-    console.log(localStorage)
+                        let imagem = document.createElement("img")
+                        imagem.setAttribute("src","daroca-api/imagens_de_produtos/"+todos_os_produtos[indice].imagem)
+                        document.querySelector('dialog').querySelector("#produtos").appendChild(imagem)
+                    }
+                }
+            }
+        }
+    })
 }
