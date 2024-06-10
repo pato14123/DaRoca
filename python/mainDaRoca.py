@@ -184,7 +184,7 @@ def excluir():
 def listar():
     meuCursor = conexao.cursor() # objeto de manipulação de dados
     try: 
-        result = meuCursor.execute('SELECT id, nome, valor, imagem, tipo'+\
+        result = meuCursor.execute('SELECT *'+\
                                    'FROM daroca.produtos') 
         registros = result.fetchall()
     except:
