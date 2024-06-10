@@ -25,7 +25,7 @@ def inserir():
         id_produto = input("id do Produto (0 para terminar): ")
         if id_produto != "0":       # usuário não quer terminar o cadastro
             nome_produto = input("Nome do Produto:")
-            valor_produto = int(input("Digite o Valor do Produto:"))
+            valor_produto = float(input("Digite o Valor do Produto:"))
             imagem_produto = input("Imagem do Produto: ")
             tipo_produto = input("Descrição do produto: ")
 
@@ -94,7 +94,7 @@ def alterar():
 
                 id = input("Novo nome do Produto: ")
                 nome = input("Novo Valor do Produto:")
-                valor = input("Nova imagem do Produto: ")
+                valor = float(input("Nova imagem do Produto: "))
                 imagem = input("Nova descrição do Produto: ")
                 tipo = input("Nova Categoria do Produto: ")
  
