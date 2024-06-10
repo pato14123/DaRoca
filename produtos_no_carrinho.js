@@ -77,7 +77,7 @@ function mostrar_produtos_dialog(){
 
                         let quantidade = document.createElement("p")
                         quantidade.setAttribute("id", "quantidade_carrinho")
-                        quantidade.innerHTML = produtos_salvos[i].quantidade
+                        quantidade.innerHTML = 'quantidade: '+produtos_salvos[i].quantidade
                         document.querySelector('dialog').querySelector('#'+todos_os_produtos[indice].id).appendChild(quantidade)
 
                         let valor = document.createElement("p")
