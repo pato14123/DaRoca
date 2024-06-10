@@ -1,14 +1,13 @@
 //Não funcionando
 function colocar_produtos(tipo){
-            // fetch('http://localhost:3000/produtos')
-            // .then(resposta => {return resposta.json()})
-            // .then(dados => {
-            // })
-
-            fetch('http://127.0.0.1:5500/produtos.json')
-            .then(response => response.json())
+            fetch('http://localhost:3000/produtos')
+            .then(resposta => {return resposta.json()})
             .then(data => {
 
+            // fetch('http://127.0.0.1:5500/produtos.json')
+            // .then(response => response.json())
+            // .then(data => {
+                console.log(data)
                 // Acessar os dados
                 const produtos = data.produtos
                 document.querySelector('#Selecionar_Produtos').innerHTML = ""
