@@ -27,7 +27,7 @@ def inserir():
             nome_produto = input("Nome do Produto:")
             valor_produto = float(input("Digite o Valor do Produto:"))
             imagem_produto = input("Imagem do Produto: ")
-            tipo_produto = input("Descrição do produto: ")
+            tipo_produto = input("tipo do produto: ")
 
     
         # criamos uma string com o comando Insert para inserir os novos 
@@ -92,11 +92,11 @@ def alterar():
 
                 print("\nabaixo digite [enter] para manter a informação atual\n")
 
-                id = input("Novo nome do Produto: ")
-                nome = input("Novo Valor do Produto:")
-                valor = float(input("Nova imagem do Produto: "))
-                imagem = input("Nova descrição do Produto: ")
-                tipo = input("Nova Categoria do Produto: ")
+                id = input("Novo id do Produto: ")
+                nome = input("Novo nome do Produto:")
+                valor = float(input("Novo valor do Produto: "))
+                imagem = input("Nova imagem do Produto: ")
+                tipo = input("Novo tipo do Produto: ")
  
                 if id == "": # usuário digitou [Enter]
                     id = registros[0][0] # nome original do BD
