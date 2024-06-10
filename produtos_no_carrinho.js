@@ -48,17 +48,13 @@ function salvar_produtos_colocados(){
 }
 
 function mostrar_produtos_dialog(){
-        // fetch('http://localhost:3000/produtos')
-        // .then(resposta => {return resposta.json()})
-        // .then(dados => {
-        // })
     dialog = document.querySelector("dialog")
     dialog.querySelector("#produtos").innerHTML = ""
     dialog.querySelector("#valor").innerHTML = ""
-    fetch('http://127.0.0.1:5500/produtos.json')
+    fetch('http://localhost:3000/produtos')
     .then(response => response.json())
     .then(data => {
-        const todos_os_produtos = data.produtos
+        const todos_os_produtos = data
         let produtos_salvos = JSON.parse(localStorage.getItem('produtos') || '[]')
         soma = 0
         if(produtos_salvos.length != 0){

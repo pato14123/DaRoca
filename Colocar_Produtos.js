@@ -7,9 +7,9 @@ function colocar_produtos(tipo){
             // fetch('http://127.0.0.1:5500/produtos.json')
             // .then(response => response.json())
             // .then(data => {
-                console.log(data)
+
                 // Acessar os dados
-                const produtos = data.produtos
+                const produtos = data
                 document.querySelector('#Selecionar_Produtos').innerHTML = ""
                 if(tipo != null){
                     for(let indice = 0; indice < produtos.length; indice++){    
