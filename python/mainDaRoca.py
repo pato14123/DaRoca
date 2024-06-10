@@ -20,110 +20,110 @@ def ConectouAoBancoDeDados() -> bool: # informará se conseguiu (True) ou não (
 
 def inserir():
     meuCursor = conexao.cursor() # cursor: objeto de manipulação de dados
-    nome_produto = "-"
-    while nome_produto != "0":
-        nome_produto = input("Nome do Produto (0 para terminar): ")
-        if nome_produto != "0":       # usuário não quer terminar o cadastro
-            imagem_produto = input("Imagem do Produto: ")
+    id_produto = "-"
+    while id_produto != "0":
+        id_produto = input("id do Produto (0 para terminar): ")
+        if id_produto != "0":       # usuário não quer terminar o cadastro
+            nome_produto = input("Nome do Produto:")
             valor_produto = int(input("Digite o Valor do Produto:"))
-            descrição_produto = input("Descrição do produto: ")
-            categoria_produto = int(input("Digite a categoria deste produto:"))
+            imagem_produto = input("Imagem do Produto: ")
+            tipo_produto = input("Descrição do produto: ")
 
     
         # criamos uma string com o comando Insert para inserir os novos 
             
         sComando = "insert into daroca.produtos " +\
-        "           (nome, imagem, valor, descricao, categoria)"+\
         " VALUES "+\
-        f"('{nome_produto}', '{imagem_produto}','{valor_produto}','{descrição_produto}','{categoria_produto}')"
+        f"('{id_produto}', '{nome_produto}','{valor_produto}','{imagem_produto}','{tipo_produto}')"
 
 
         try: # tente executar o comando abaixo:
             meuCursor.execute(sComando)
 
         except: # em caso de erro
-            print("Não foi possível incluir. Pode haver depto repetido.")
+            print("Não foi possível incluir. Pode haver produto repetido.")
  
         meuCursor.commit() # enviar as mudanças para o BD
 
 def alterar():
     meuCursor = conexao.cursor() # objeto de manipulação de dados
-    nome_produto = "-"
-    while nome_produto != "0":
-        nome_produto = input("Nome do Produto (0 para terminar): ")
-        if nome_produto != "0": # usuário não quer terminar o cadastro
-            result = meuCursor.execute('SELECT nome, imagem, valor, descricao, categoria '+\
+    id_produto = "-"
+    while id_produto != "0":
+        id_produto = input("id do Produto (0 para terminar): ")
+        if id_produto != "0": # usuário não quer terminar o cadastro
+            result = meuCursor.execute('SELECT * '+\
                                       ' FROM daroca.produtos '+\
-                                      ' WHERE nome = ?', nome_produto)
+                                      ' WHERE id = ?', id_produto)
             registros = result.fetchall()      # fetchall recupera os dados e os armazena na variavel registros
             if len(registros) == 0:
                 print("Produto não encontrado.")
             else:
                 print("Produto encontrado:\n")
-                nome = registros[0][0]
-                imagem = registros[0][1]
+                id = registros[0][0]
+                nome = registros[0][1]
                 valor = registros[0][2]
-                descricao = registros[0][3]
-                categoria = registros[0][4]
+                imagem = registros[0][3]
+                tipo = registros[0][4]
+
+                if id != None:
+                    print("id do produto: " + id)
+                else:
+                    print("id não informado")
 
                 if nome != None:
-                    print("Nome do departamento: " + nome)
+                    print("nome do produto:" + nome)
                 else:
-                    print("Nome não informado")
-
-                if imagem != None:
-                    print("imagem:" + imagem)
-                else:
-                    print("Imagem Não informada")
+                    print("nome Não informado")
 
                 if valor != None:
                     print("valor:" + valor)
                 else:
                     print("Valor não informado")
 
-                if descricao != None:
-                    print("descição:" + descricao)
+                if imagem != None:
+                    print("imagem:" + imagem)
                 else:
-                    print("descrição Não informado")
+                    print("Imagem Não informada")
 
-                if categoria != None:
-                    print("Categoria:" + categoria)
+                if tipo != None:
+                    print("tipo:" + tipo)
                 else:
-                    print("Categoria Não informada\n")
+                    print("tipo Não informado\n")
 
                 print("\nabaixo digite [enter] para manter a informação atual\n")
-                nome = input("Novo nome do Produto: ")
-                valor = input("Novo Valor do Produto:")
-                imagem = input("Nova imagem do Produto: ")
-                descricao = input("Nova descrição do Produto: ")
-                categoria = input("Nova Categoria do Produto: ")
- 
-                if nome == "": # usuário digitou [Enter]
-                    nome = registros[0][0] # nome original do BD
 
-                if imagem == "": # usuário digitou [Enter]
-                    imagem = registros[0][1] # gerente original do BD
+                id = input("Novo nome do Produto: ")
+                nome = input("Novo Valor do Produto:")
+                valor = input("Nova imagem do Produto: ")
+                imagem = input("Nova descrição do Produto: ")
+                tipo = input("Nova Categoria do Produto: ")
+ 
+                if id == "": # usuário digitou [Enter]
+                    id = registros[0][0] # nome original do BD
+
+                if nome == "": # usuário digitou [Enter]
+                    nome = registros[0][1] # gerente original do BD
 
                 if valor == "": # usuário digitou [Enter]
                     valor = registros[0][2] # data original do BD
 
-                if descricao == "": # usuário digitou [Enter]
-                    descricao = registros[0][3] # data original do BD
+                if imagem == "": # usuário digitou [Enter]
+                    imagem = registros[0][3] # data original do BD
 
-                if categoria == "": # usuário digitou [Enter]
-                    categoria = registros[0][4] # data original do BD
+                if tipo == "": # usuário digitou [Enter]
+                    tipo = registros[0][4] # data original do BD
  
                 # criamos uma string com o comando Update para atualizar os novos dados
 
                 sComando = "Update daroca.produtos " +\
-                " set nome = ?, imagem = ?, valor = ?, descricao = ?,"+\
-                " categoria = ? "+\
-                " where nome = ? "
+                " set id = ?, nome = ?, valor = ?, imagem = ?,"+\
+                " tipo = ? "+\
+                " where id = ? "
  
                 # fazemos o cursor executar a string com o comando Update que criamos
 
                 try: # tente executar o comando abaixo:
-                    meuCursor.execute(sComando, nome, imagem, valor, descricao, categoria)
+                    meuCursor.execute(sComando, id, imagem, valor, imagem, tipo)
                 except: # em caso de erro
                     print("Não foi possível incluir. Pode haver depto repetido.")
 
@@ -131,51 +131,51 @@ def alterar():
 
 def excluir():
     meuCursor = conexao.cursor() # objeto de manipulação de dados
-    nome_produto = "-"
-    while nome_produto != "0":
-        nome_produto = input("Nome do Produto (0 para terminar): ")
-        if nome_produto != "0": 
-            result = meuCursor.execute('SELECT nome, imagem, valor, descricao, categoria '+\
+    id_produto = "-"
+    while id_produto != "0":
+        id_produto = input("id (0 para terminar): ")
+        if id_produto != "0": 
+            result = meuCursor.execute('SELECT * '+\
                                       ' FROM daroca.produtos '+\
-                                      ' WHERE nome = ?', nome_produto)
+                                      ' WHERE id = ?', id_produto)
             registros = result.fetchall()
             if len(registros) == 0:
                 print("Produto não encontrado.")
             else:
                 print("Produto encontrado:")
-                nome = registros[0][0]
-                imagem = registros[0][1]
+                id = registros[0][0]
+                nome = registros[0][1]
                 valor = registros[0][2]
-                descricao = registros[0][3]
-                categoria = registros[0][4]
+                imagem = registros[0][3]
+                tipo = registros[0][4]
+                if id != None:
+                    print("id do produto: " + id)
+                else:
+                    print("id não informado")
                 if nome != None:
-                    print("Nome do departamento: " + nome)
+                    print("nome do produto:" + nome)
                 else:
-                    print("Nome não informado")
-                if imagem != None:
-                    print("imagem:" + imagem)
-                else:
-                    print("Imagem Não informada")
+                    print("nome Não informado")
                 if valor != None:
                     print("valor:" + valor)
                 else:
                     print("Valor não informado")
-                if descricao != None:
-                    print("descição:" + descricao)
+                if imagem != None:
+                    print("imagem:" + imagem)
                 else:
-                    print("descrição Não informado")
-                if categoria != None:
-                    print("Categoria:" + categoria)
+                    print("imagem Não informada")
+                if tipo != None:
+                    print("tipo:" + tipo)
                 else:
-                    print("Categoria Não informada\n")
+                    print("tipo Não informado\n")
  
                 resposta = input("Deseja realmente excluir (s/n)?")
                 if resposta == "s":
                     # criamos uma string com o comando Delete para excluir o registro lido
                     sComando = "Delete from daroca.produtos " +\
-                    " where nome = ? "
+                    " where id = ? "
                     try: # tente executar o comando abaixo:
-                        meuCursor.execute(sComando, nome)
+                        meuCursor.execute(sComando, id)
                     except: # em caso de erro
                         print("Não foi possível excluir. Deve ser um departamento em uso.")
  
