@@ -81,11 +81,11 @@ function mostrar_produtos_dialog(){
                         document.querySelector('dialog').querySelector('#'+todos_os_produtos[indice].id).appendChild(quantidade)
 
                         let valor = document.createElement("p")
-                        valor.innerHTML = "R$"+todos_os_produtos[indice].valor
+                        valor.innerHTML = "valor unitário: R$"+todos_os_produtos[indice].valor
                         document.querySelector('dialog').querySelector('#'+todos_os_produtos[indice].id).appendChild(valor)
 
                         let valor_total_produto = document.createElement("p")
-                        valor_total_produto.innerHTML = "R$"+Number(todos_os_produtos[indice].valor)*Number(produtos_salvos[i].quantidade)
+                        valor_total_produto.innerHTML = "valor total produto: R$"+Number(todos_os_produtos[indice].valor)*Number(produtos_salvos[i].quantidade)
                         document.querySelector('dialog').querySelector('#'+todos_os_produtos[indice].id).appendChild(valor_total_produto)
 
                         let div_botoes = document.createElement("div")
