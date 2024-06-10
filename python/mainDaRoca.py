@@ -190,11 +190,8 @@ def listar():
     except:
             print("Erro na busca dos dados\n")
 
-    print("Nome. valor. Descrição, imagem. Categoria.")
-    print(registros)
-
     for dados in registros:
-        print(f"{dados[0]}\t {dados[1]}\t {dados[2]}\t {dados[3]}")
+        print(f"id: {dados[0]}\t nome:{dados[1]}\t valor:{dados[2]}\t imagem:{dados[3]}\t tipo:{dados[4]}")
  
     input("Tecle [enter] para terminar:")
     
