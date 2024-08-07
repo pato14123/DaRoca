@@ -55,7 +55,9 @@
                     }
 
                     else{
+                        console.log(i.querySelector("p").innerHTML)
                         i.style.backgroundColor = ""
+                        i.setAttribute("onclick", "Mudar("+i.querySelector("p").innerHTML+")")
                     }
                 }
             }
